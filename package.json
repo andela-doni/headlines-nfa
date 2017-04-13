@@ -37,6 +37,6 @@
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
-    "test": "node hello.js"
+    "test": "./hello.js"
   }
 }
