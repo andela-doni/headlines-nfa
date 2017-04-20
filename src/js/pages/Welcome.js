@@ -3,8 +3,7 @@ import React from "react";
 import request from 'superagent';
 import SearchStore from '../stores/SearchStore';
 import {searchSources} from '../actions/SearchActions';
-const API_KEY="213327409d384371851777e7c7f78dfe";
-let link =  `https://newsapi.org/v1/articles?source={source.name}&sortBy=latest&apiKey={API_KEY}`
+
 export default class Welcome extends React.Component {
   
   constructor(){
@@ -57,7 +56,7 @@ export default class Welcome extends React.Component {
     
       {filteredSources.map(source=>{
             return <div key={source.id}>
-                      <h4><a href= {link} >{source.name}</a></h4>
+                      <h4><a href ="#">{source.name}</a></h4>
                           <p>{source.description}</p>
                       </div>                      
 
