@@ -1,9 +1,9 @@
-import AppDispatcher from '..utils/AppDispatcher.js';
-import {Actions} from '../utils/AppConstants.js';
+//import AppDispatcher from '..utils/AppDispatcher.js';
+//import {Actions} from '../utils/AppConstants.js';
 
-export function receiveSources(searchResults){
-    AppDispatcher.handleServerAction({
-        type:Actions.RECEIVE_SEARCH_QUERY,
-        searchResults: searchResults,
-    });
-}
+//export function receiveSources(searchResults){
+    //AppDispatcher.handleServerAction({
+        //type:Actions.RECEIVE_SEARCH_QUERY,
+        //searchResults: searchResults,
+    //});
+//}
