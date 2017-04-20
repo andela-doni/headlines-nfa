@@ -1,5 +1,5 @@
 import AppDispatcher from '../utils/AppDispatcher';
-import {Actions} from '../utils/AppConstants.js';
+import { Actions } from '../utils/AppConstants.js';
 //import * as API from '../utils/news.ja';
 import request from 'superagent';
 
@@ -16,7 +16,6 @@ export function searchSources(){
         query:result.sources,
 
     });
-
 
     })
     

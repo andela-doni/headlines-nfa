@@ -14,6 +14,7 @@ export default class Nav extends React.Component {
     this.state = {
       collapsed: true,
       user:Cookies.get('debprojdb')
+      //if the user is logged in, set state of the user , get to fetch already created cookie
     };
   }
 

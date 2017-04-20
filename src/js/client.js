@@ -12,6 +12,7 @@ import Cookies from 'js-cookie';
 
 const app = document.getElementById('app');
 const isLoggedIn = Cookies.get('debprojdb') !== undefined;
+//has info stored on the cookie
 
 ReactDOM.render(
   <Router history={hashHistory}>

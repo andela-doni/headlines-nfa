@@ -4,15 +4,14 @@ import Cookies from 'js-cookie';
 import Footer from "../components/layout/Footer";
 import Nav from "../components/layout/Nav";
 const isLoggedIn = Cookies.get('debprojdb');
+//info you get from your the stored info on your browser cookie
 import createHistory from 'history/createBrowserHistory';
-
-const history = createHistory({
-  forceRefresh: true
-})
 export default class Layout extends React.Component {
  
   render() {
     const { location } = this.props;
+    console.log(this.props);
+    // this.props contains the location that is used to fetch pathname
     const containerStyle = {
       marginTop: "60px"
     };

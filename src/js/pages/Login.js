@@ -12,7 +12,9 @@ const responseGoogle = (response)=>{
   let data = response.profileObj;
   let user_details = {name:data.name,email:data.email,image:data.imageUrl};
   Cookies.set('debprojdb',user_details);
+  //create cookie db and enter user details
    history.push('/');
+   //force refresh and redirect to the landing page
 };
 
 
