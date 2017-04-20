@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router";
-
+import Cookies from 'js-cookie';
 import Footer from "../components/layout/Footer";
 import Nav from "../components/layout/Nav";
+const isLoggedIn = Cookies.get('debprojdb');
+import createHistory from 'history/createBrowserHistory';
 
+const history = createHistory({
+  forceRefresh: true
+})
 export default class Layout extends React.Component {
+ 
   render() {
     const { location } = this.props;
     const containerStyle = {
@@ -14,7 +20,7 @@ export default class Layout extends React.Component {
     return (
       <div>
 
-        <Nav location={location} />
+        <Nav location={location} isLoggedIn={isLoggedIn}  />
 
         <div class="container" style={containerStyle}>
           <div class="row">

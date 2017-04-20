@@ -12,12 +12,12 @@ import Cookies from 'js-cookie';
 
 const app = document.getElementById('app');
 const isLoggedIn = Cookies.get('debprojdb') !== undefined;
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Layout}>
       <IndexRoute component={Welcome} />
-      <Route path="sources(/:sources)" name="sources" component={Sources} />
-      <Route path="favourites" name="favourites" component={Favourites} /> 
+      
       <Route path="login" name="login" component={Login} />
       <Route path="logout" name="logout" component={Logout} />
      

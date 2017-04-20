@@ -8,6 +8,7 @@ const history = createHistory({
 })
 
 const responseGoogle = (response)=>{
+    console.log(user_details);
   let data = response.profileObj;
   let user_details = {name:data.name,email:data.email,image:data.imageUrl};
   Cookies.set('debprojdb',user_details);

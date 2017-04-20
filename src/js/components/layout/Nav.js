@@ -6,7 +6,7 @@ import createHistory from 'history/createBrowserHistory';
 const history = createHistory({
   forceRefresh: true
 })
-const isLoggedIn = Cookies.get('debprojdb');
+
 export default class Nav extends React.Component {
   constructor() {
     super()
@@ -28,12 +28,11 @@ export default class Nav extends React.Component {
   }
 
   render() {
-    const { location } = this.props;
+    const { location,isLoggedIn } = this.props;
     const { collapsed, user } = this.state;
     const welcomeClass = location.pathname === "/" ? "active" : "";
-    const sourcesClass = location.pathname.match(/^\/sources/) ? "active" : "";
-    const favouritesClass = location.pathname.match(/^\/favourites/) ? "active" : "";
-    const loginClass = location.pathname.match(/^\/favourites/) ? "active" : "";
+    const loginClass = location.pathname.match(/^\/login/) ? "active" : "";
+
     const navClass = collapsed ? "collapse" : "";
     
     return (
@@ -49,17 +48,12 @@ export default class Nav extends React.Component {
           </div>
           <div class={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class={welcomeClass}>
-                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Welcome</IndexLink>
-              </li>
-              <li class={sourcesClass}>
-                <Link to="sources" onClick={this.toggleCollapse.bind(this)}>Sources</Link>
-              </li>
-              <li class={favouritesClass}>
-                <Link to="favourites" onClick={this.toggleCollapse.bind(this)}>Favourites</Link>
-              </li>
               <li class={loginClass}>
                 <Link to={!isLoggedIn? "login":"logout"} onClick={this.toggleCollapse.bind(this)}>{isLoggedIn? "Logout":"Login"}</Link>
+              </li>
+        
+              <li class={welcomeClass}>
+                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Welcome</IndexLink>
               </li>
             </ul>
           </div>
