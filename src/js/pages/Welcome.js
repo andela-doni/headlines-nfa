@@ -1,38 +1,36 @@
 import React from "react";
-//import {SearchSources} from '../utils/news';
 import request from 'superagent';
-import SearchStore from '../stores/SearchStore';
-import {searchSources} from '../actions/SearchActions';
-
-export default class Welcome extends React.Component {
-  
+import SourceStore from '../stores/SourceStore';
+import {getSources} from '../actions/SourcesActions';
+import {getArticles} from '../actions/ArticlesActions'
+export default class Welcome extends React.Component { 
   constructor(){
     super();
     this.getSources = this.getSources.bind(this);
     this.state ={
-      sources: SearchStore.getAll(),
+      sources: SourceStore.getAll(),
       search: ""
     };
   }
   
   componentWillMount(){
-    
-        // SearchStore.on(this.getSources);
-    searchSources();
+        // SourceStore.on(this.getSources);
+    getSources();
   }
   
   componentDidMount(){
-    SearchStore.addChangeListener(this.getSources);
+    SourceStore.addChangeListener(this.getSources);
   }
 
   componentWillUnMount(){
-    SearchStore.removeChangeListener(this.getSources);
+    SourceStore.removeChangeListener(this.getSources);
   }
 
   getSources(){
     this.setState({
-      sources: SearchStore.getAll(),
+      sources: SourceStore.getAll(), 
     });
+    console.log(SourceStore.getAll(),);
   }
   
   handleChange(event){
