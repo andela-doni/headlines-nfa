@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Router, Route, IndexRoute, hashHistory } from "react-router";
+import { Router, Route, IndexRoute, browserHistory } from "react-router";
 
 import Sources from "./pages/Sources";
 import Welcome from "./pages/Welcome";
@@ -14,14 +14,13 @@ const app = document.getElementById('app');
 const isLoggedIn = Cookies.get('debprojdb') !== undefined;
 
 ReactDOM.render(
-  <Router history={hashHistory}>
-    <Route path="/" component={Layout}>
-      <IndexRoute component={Welcome} />
-      
-      <Route path="login" name="login" component={Login} />
-      <Route path="logout" name="logout" component={Logout} />
-     
-      
+  <Router history={browserHistory}>
+    <Route>
+      <Route path="/login" name="login" component={Login} />
+      <Route path="/" component={Layout}>
+        <IndexRoute component={Welcome} />
+        <Route path="logout" name="logout" component={Logout} />
+      </Route>
     </Route>
   </Router>,
 app);
