@@ -52,9 +52,9 @@
     "test": "./hello.js",
     "build": "webpack -p",
     "watch": "webpack --watch",
-    "serve": "serve ./index.html",
+    "serve": "serve index.html",
     "dev": "webpack -d --watch",
     "prestart": "webpack -p",
-    "start": "babel-node server.js"
+    "start": "node server.js"
   }
 }
