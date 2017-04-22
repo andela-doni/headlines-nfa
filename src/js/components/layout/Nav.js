@@ -22,9 +22,9 @@ export default class Nav extends React.Component {
     this.setState({collapsed});
   }
   componentWillMount(){
-    if(this.state.user === undefined){
-      history.push('/#/login')
-    }
+    // if(this.state.user === undefined){
+    //   history.push('/login')
+    // }
   }
 
   render() {
@@ -32,6 +32,7 @@ export default class Nav extends React.Component {
     const { collapsed, user } = this.state;
     const welcomeClass = location.pathname === "/" ? "active" : "";
     const loginClass = location.pathname.match(/^\/login/) ? "active" : "";
+    const articlesClass = location.pathname.match(/^\/articles/) ? "active" : "";
 
     const navClass = collapsed ? "collapse" : "";
     
@@ -54,6 +55,9 @@ export default class Nav extends React.Component {
         
               <li class={welcomeClass}>
                 <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Welcome</IndexLink>
+              </li>
+              <li class={articlesClass}>
+                <Link to="/articles" onClick={this.toggleCollapse.bind(this)}>Articles</Link>
               </li>
             </ul>
           </div>

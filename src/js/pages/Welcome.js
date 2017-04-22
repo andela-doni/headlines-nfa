@@ -1,23 +1,23 @@
 import React from "react";
-import request from 'superagent';
+
 import SourceStore from '../stores/SourceStore';
 import {getSources} from '../actions/SourcesActions';
-import {getArticles} from '../actions/ArticlesActions'
 export default class Welcome extends React.Component { 
   constructor(){
     super();
-    this.getSources = this.getSources.bind(this);
     this.state ={
       sources: SourceStore.getAll(),
       search: ""
     };
+
+    this.getSources = this.getSources.bind(this);
   }
   
   componentWillMount(){
         // SourceStore.on(this.getSources);
     getSources();
   }
-  
+
   componentDidMount(){
     SourceStore.addChangeListener(this.getSources);
   }
@@ -28,9 +28,9 @@ export default class Welcome extends React.Component {
 
   getSources(){
     this.setState({
-      sources: SourceStore.getAll(), 
+      sources: SourceStore.getAll(),
     });
-    console.log(SourceStore.getAll(),);
+    //console.log(SourceStore.getAll());
   }
   
   handleChange(event){
@@ -38,10 +38,11 @@ export default class Welcome extends React.Component {
     //this.changeSources(this.state.sources);
     //console.log(event);
     this.setState({search: event.target.value})
-    console.log(this.state.search)
+    console.log(this.state.search, "search");
   }
   render() {
    const {sources} = this.state;   
+   console.log(sources, "sources");
    const filteredSources = this.state.sources.filter(source=>source.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1); 
   
     return(
