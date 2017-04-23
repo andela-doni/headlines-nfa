@@ -2,7 +2,6 @@ import React from 'react';
 import ArticlesStore from '../stores/ArticlesStore';
 import { getArticles } from '../actions/ArticlesActions';
 
-
 export default class Articles extends React.Component {
   constructor() {
     super();
@@ -11,6 +10,7 @@ export default class Articles extends React.Component {
     };
 
     this.getArticles = this.getArticles.bind(this);
+    this.handleClick = this.handleClick.bind(this)
   }
 
 
@@ -21,7 +21,7 @@ export default class Articles extends React.Component {
 
   }
 
-  componentWillUnMount(){
+  componentWillUnMount() {
     SourceStore.removeChangeListener(this.getArticles);
   }
 
@@ -30,20 +30,39 @@ export default class Articles extends React.Component {
       articles: ArticlesStore.getAll()
     });
   }
+  handleClick(position){
+     getArticles(this.props.params.article, position );
+         
+
+  }
   render() {
     const { articles } = this.state;
-    console.log(this.state);
     return (
-      <div class="jumbotron">
-        <h1>Headlines articles</h1>
-        <p>Articles from over 70 sources</p>
+      <div>
+        <h1>Articles</h1>
+        <ul class="list-group">
+          <li class="list-group-item" onClick={this.handleClick(top).bind(this)}>
+            
+           {/*<link to ={source.sortBysAvailable}> Top </link>*/}
+           Top
+         </li>
+          <li class="list-group-item" onClick={this.handleClick(latest).bind(this)}>
+            Latest
+            {/*<link to ={hey}> Latest </link>*/}
+         </li>
+          <li class="list-group-item" onClick={this.handleClick(top).bind(this)}>
+            Popular
+            {/*<link to ={hey}> Popular </link>*/}
+         </li>
+        </ul>
         <div>
 
           {articles.map((article, index) => {
-            console.log(article);
+            //console.log(article);
             return <div key={index}>
-              <h4><a href={article.url} target="_blank">{article.author}</a></h4>
-              <p>{article.description}</p>
+              <h4><a href={article.url} target="_blank">{article.title}</a></h4>
+              <p></p>
+              <p>Date published: {article.publishedAt}</p><p>{article.description}</p>
             </div>
           })}
         </div>
