@@ -19,7 +19,7 @@ ReactDOM.render(
       <Route path="/login" name="login" component={Login} />
       <Route path="/" component={Layout}>
         <IndexRoute component={Welcome} />
-        <Route path="/articles" name="articles" component={Articles} />
+        <Route path="/sources/:article" name="articles" component={Articles} />
         <Route path="logout" name="logout" component={Logout} />
       </Route>
     </Route>

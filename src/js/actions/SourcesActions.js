@@ -1,9 +1,7 @@
 import request from 'superagent';
 import { Actions } from '../utils/AppConstants';
 import AppDispatcher from '../utils/AppDispatcher';
-/**
- *
- */
+
 export function getSources() {
   request.get('https://newsapi.org/v1/sources')
     .set('Accept', 'application/json')

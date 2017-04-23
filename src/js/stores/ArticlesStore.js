@@ -4,12 +4,14 @@ import AppDispatcher from '../utils/AppDispatcher';
 import { Actions } from '../utils/AppConstants';
 
 const CHANGE_EVENT = 'change';
+
 const ArticlesStore = assign({}, EventEmitter.prototype, {
-
-
-    // Actual collection of model data
+  // Actual collection of model data
   articles: [],
-    // Accessor method we'll use later
+  source: '',
+  sortBy: '',
+
+  // Accessor method we'll use later
   getAll() {
     return this.articles;
   },
@@ -28,13 +30,18 @@ const ArticlesStore = assign({}, EventEmitter.prototype, {
 });
 
 AppDispatcher.register((payload) => {
+  // console.log(payload);
   switch (payload.type) {
     case Actions.GET_ARTICLES:
-      ArticlesStore.articles = payload.query;
+      if (ArticlesStore.articles.length > 0) ArticlesStore.articles.list = [];
+      ArticlesStore.articles = [...payload.response.articles, ...ArticlesStore.articles];
+      ArticlesStore.source = payload.response.source;
+      ArticlesStore.sortBy = payload.response.sortBy;
       ArticlesStore.emitChange();
       break;
+    default:
+      return true; // Needed for Flux promise resolution
   }
-  return true; // Needed for Flux promise resolution
 });
 
 export default ArticlesStore;

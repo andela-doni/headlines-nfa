@@ -2,6 +2,11 @@ import React from "react";
 
 import SourceStore from '../stores/SourceStore';
 import {getSources} from '../actions/SourcesActions';
+import Articles from './Articles'
+import { Link } from "react-router";
+
+import {getArticles} from '../actions/ArticlesActions';
+
 export default class Welcome extends React.Component { 
   constructor(){
     super();
@@ -15,10 +20,11 @@ export default class Welcome extends React.Component {
   
   componentWillMount(){
         // SourceStore.on(this.getSources);
-    getSources();
+   
   }
 
   componentDidMount(){
+     getSources();
     SourceStore.addChangeListener(this.getSources);
   }
 
@@ -55,7 +61,7 @@ export default class Welcome extends React.Component {
     
       {filteredSources.map(source=>{
             return <div key={source.id}>
-                      <h4><a href ="#">{source.name}</a></h4>
+                      <h4><Link to ={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>{source.name}</Link></h4>
                           <p>{source.description}</p>
                       </div>                      
 
