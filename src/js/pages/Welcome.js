@@ -34,6 +34,8 @@ export default class Welcome extends React.Component {
       sources: SearchStore.getAll(),
     });
   }
+
+  
   
   handleChange(event){
     //const searchedSources = e.target.value;

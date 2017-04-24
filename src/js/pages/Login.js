@@ -20,28 +20,28 @@ const responseGoogle = (response) => {
 
 
 export default class Login extends React.Component {
-  onSignIn() {
-    var profile = googleUser.getBasicProfile();
-    responseGoogle({
-      profileObj: {
-        name: profile.getName(),
-        email: profile.getEmail(),
-        imageUrl: profile.getImageUrl()
-      }
-    });
-  }
+  // onSignIn() {
+  //   var profile = googleUser.getBasicProfile();
+  //   responseGoogle({
+  //     profileObj: {
+  //       name: profile.getName(),
+  //       email: profile.getEmail(),
+  //       imageUrl: profile.getImageUrl()
+  //     }
+  //   });
+  // }
 
   render() {
     return (
       <div>
-        <div
+        {/*<div
           class="g-signin2"
           onClick={this.onSignIn}
           data-onsuccess="onSignIn" />
         <button
           onClick={this.onSignIn}
           className="ourButton">Sign in now</button>
-          
+          */}
         <GoogleLogin
           clientId="428253049382-tec2fhihi9gj19m8ugqdfp24uj105mum.apps.googleusercontent.com"
           buttonText="Login"

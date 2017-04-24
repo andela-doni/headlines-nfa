@@ -1,6 +1,7 @@
 import React from 'react';
 import Cookies from 'js-cookie';
 import createHistory from 'history/createBrowserHistory';
+import {logout} from '../actions/AuthenticationAction';
 
 const history = createHistory({
   forceRefresh: true
@@ -8,8 +9,7 @@ const history = createHistory({
 
 export default class Logout extends React.Component {
   componentWillMount() {
-    Cookies.remove('debprojdb');
-    history.push('/#/login');
+    logout();
   }
   render() {
     return (<h1>Logged out</h1>);

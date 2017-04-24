@@ -5,22 +5,46 @@ import Footer from "../components/layout/Footer";
 import Nav from "../components/layout/Nav";
 const isLoggedIn = Cookies.get('debprojdb');
 import createHistory from 'history/createBrowserHistory';
-
+import AuthenticationStore from '../stores/AuthenticationStore';
+import {isLoggin} from '../actions/AuthenticationAction';
 const history = createHistory({
   forceRefresh: true
 })
 export default class Layout extends React.Component {
- 
+  constructor(props){
+    super(props);
+    this.login = this.login.bind(this);
+    this.state = this.userState();
+  }
+  
+  componentDidMount() {
+    AuthenticationStore.addChangeListener(this.login);
+    isLoggin();
+  }
+  componentWillUnmount(){
+    AuthenticationStore.removeChangeListener(this.login)
+  }
+  login(){
+    this.setState(this.userState())
+  }
+
+  userState(){
+    return {
+      user: AuthenticationStore.getUser()
+    }
+  }
+
+
   render() {
     const { location } = this.props;
     const containerStyle = {
       marginTop: "60px"
     };
-    console.log("layout");
+    console.log(this.state.user);
     return (
       <div>
 
-        <Nav location={location} isLoggedIn={isLoggedIn}  />
+        <Nav location={location} isLoggedIn={this.state.user.isAuthenticated}  />
 
         <div class="container" style={containerStyle}>
           <div class="row">

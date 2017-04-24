@@ -2,7 +2,7 @@ import AppDispatcher from '../utils/AppDispatcher.js';
 import {Actions,ViewFilters} from '../utils/AppConstants';
 import {EventEmitter} from 'events';
 import assign from 'object-assign';
-var CHANGE_EVENT = 'change';
+let CHANGE_EVENT = 'change';
 
 let SearchStore = assign({}, EventEmitter.prototype, {
 
@@ -37,7 +37,7 @@ AppDispatcher.register( function( payload ) {
 
     switch( payload.type ) {
         case Actions.GET_SOURCES:
-         console.log("i am here dispatching event");
+         //console.log("i am here dispatching event");
             // We get to mutate data!
             
             
