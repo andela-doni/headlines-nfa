@@ -14,7 +14,6 @@ export default class Welcome extends React.Component {
       sources: SourceStore.getAll(),
       search: ""
     };
-
     this.getSources = this.getSources.bind(this);
   }
   
@@ -44,11 +43,12 @@ export default class Welcome extends React.Component {
     //this.changeSources(this.state.sources);
     //console.log(event);
     this.setState({search: event.target.value})
-    console.log(this.state.search, "search");
+    //console.log(this.state.search, "search");
   }
+
   render() {
    const {sources} = this.state;   
-   console.log(sources, "sources");
+   console.log(this.state, "sources");
    const filteredSources = this.state.sources.filter(source=>source.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1); 
   
     return(
