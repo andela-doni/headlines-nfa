@@ -49,6 +49,7 @@ export default class Welcome extends React.Component {
   render() {
    const {sources} = this.state;   
    console.log(this.state, "sources");
+   
    const filteredSources = this.state.sources.filter(source=>source.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1); 
   
     return(
@@ -60,7 +61,11 @@ export default class Welcome extends React.Component {
       <div>
     
       {filteredSources.map(source=>{
+        //console.log(source.sortBysAvailable, 'eachsource')
+        {/*//console.log('this.props.location.query', this.props.location.query);*/}
             return <div key={source.id}>
+
+                 
                       <h4><Link to ={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>{source.name}</Link></h4>
                           <p>{source.description}</p>
                       </div>                      

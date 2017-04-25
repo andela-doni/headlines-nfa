@@ -39,6 +39,8 @@ AppDispatcher.register((payload) => {
       ArticlesStore.sortBy = payload.response.sortBy;
       ArticlesStore.emitChange();
       break;
+    case Actions.SORT_ARTICLES:
+      ArticlesStore.sortBy = payload.response.sortBy;
     default:
       return true; // Needed for Flux promise resolution
   }
