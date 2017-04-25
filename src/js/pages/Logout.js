@@ -10,6 +10,8 @@ const history = createHistory({
 export default class Logout extends React.Component {
   componentWillMount() {
     logout();
+    Cookies.remove('debprojdb');
+    history.push('/login');
   }
   render() {
     return (<h1>Logged out</h1>);

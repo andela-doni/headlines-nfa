@@ -1,38 +1,42 @@
 import React from "react";
-//import {SearchSources} from '../utils/news';
-import request from 'superagent';
-import SearchStore from '../stores/SearchStore';
-import {searchSources} from '../actions/SearchActions';
 
-export default class Welcome extends React.Component {
-  
+import SourceStore from '../stores/SourceStore';
+import {getSources} from '../actions/SourcesActions';
+import Articles from './Articles'
+import { Link } from "react-router";
+
+import {getArticles} from '../actions/ArticlesActions';
+
+export default class Welcome extends React.Component { 
   constructor(){
     super();
-    this.getSources = this.getSources.bind(this);
     this.state ={
-      sources: SearchStore.getAll(),
+      sources: SourceStore.getAll(),
       search: ""
     };
+
+    this.getSources = this.getSources.bind(this);
   }
   
   componentWillMount(){
-    
-        // SearchStore.on(this.getSources);
-    searchSources();
+        // SourceStore.on(this.getSources);
+   
   }
-  
+
   componentDidMount(){
-    SearchStore.addChangeListener(this.getSources);
+     getSources();
+    SourceStore.addChangeListener(this.getSources);
   }
 
   componentWillUnMount(){
-    SearchStore.removeChangeListener(this.getSources);
+    SourceStore.removeChangeListener(this.getSources);
   }
 
   getSources(){
     this.setState({
-      sources: SearchStore.getAll(),
+      sources: SourceStore.getAll(),
     });
+    //console.log(SourceStore.getAll());
   }
 
   
@@ -42,10 +46,11 @@ export default class Welcome extends React.Component {
     //this.changeSources(this.state.sources);
     //console.log(event);
     this.setState({search: event.target.value})
-    console.log(this.state.search)
+    console.log(this.state.search, "search");
   }
   render() {
    const {sources} = this.state;   
+   console.log(sources, "sources");
    const filteredSources = this.state.sources.filter(source=>source.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1); 
   
     return(
@@ -58,7 +63,7 @@ export default class Welcome extends React.Component {
     
       {filteredSources.map(source=>{
             return <div key={source.id}>
-                      <h4><a href ="#">{source.name}</a></h4>
+                      <h4><Link to ={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>{source.name}</Link></h4>
                           <p>{source.description}</p>
                       </div>                      
 

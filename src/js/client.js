@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute, browserHistory } from "react-router";
 
-import Sources from "./pages/Sources";
+import Articles from "./pages/Articles";
 import Welcome from "./pages/Welcome";
 import Layout from "./pages/Layout";
 import Favourites from "./pages/Favourites";
@@ -19,6 +19,7 @@ ReactDOM.render(
       <Route path="/login" name="login" component={Login} />
       <Route path="/" component={Layout}>
         <IndexRoute component={Welcome} />
+        <Route path="/sources/:article" name="articles" component={Articles} />
         <Route path="logout" name="logout" component={Logout} />
       </Route>
     </Route>
