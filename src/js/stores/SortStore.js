@@ -2,16 +2,16 @@ import { EventEmitter } from 'events';
 import assign from 'object-assign';
 import AppDispatcher from '../utils/AppDispatcher';
 import { Actions } from '../utils/AppConstants';
-
 const CHANGE_EVENT = 'change';
-const SourceStore = assign({}, EventEmitter.prototype, {
+const SortStore = assign({}, EventEmitter.prototype, {
+  // Actual collection of model data
+  articles: [],
+  source: '',
+  sortBy: '',
 
-
-    // Actual collection of model data
-  sources: [],
     // Accessor method we'll use later
   getAll() {
-    return this.sources;
+    return this.articles;
   },
 
   emitChange() {
@@ -28,15 +28,16 @@ const SourceStore = assign({}, EventEmitter.prototype, {
 });
 
 AppDispatcher.register((payload) => {
+  console.log('payload res', payload.response);
   switch (payload.type) {
-    case Actions.GET_SOURCES:
-      SourceStore.sources = payload.query;
-      console.log('payload', payload.query[0]);
-      SourceStore.emitChange();
+    case Actions.SORT_ARTICLES:
+      if (SortStore.articles.length > 0) SortStore.articles.list = [];
+      SortStore.articles = [...payload.response.articles, ...SortStore.articles];
+      SortStore.source = payload.response.source;
+      SortStore.sortBy = payload.response.sortBy;
+      SortStore.emitChange();
       break;
   }
-  return true; // Needed for Flux promise resolution
 });
 
-export default SourceStore;
-
+export default SortStore;

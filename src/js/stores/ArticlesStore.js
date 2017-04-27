@@ -30,7 +30,7 @@ const ArticlesStore = assign({}, EventEmitter.prototype, {
 });
 
 AppDispatcher.register((payload) => {
-  // console.log(payload);
+  console.log('payload res', payload.response);
   switch (payload.type) {
     case Actions.GET_ARTICLES:
       if (ArticlesStore.articles.length > 0) ArticlesStore.articles.list = [];
@@ -39,8 +39,6 @@ AppDispatcher.register((payload) => {
       ArticlesStore.sortBy = payload.response.sortBy;
       ArticlesStore.emitChange();
       break;
-    default:
-      return true; // Needed for Flux promise resolution
   }
 });
 
