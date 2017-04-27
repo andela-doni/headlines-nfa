@@ -3,6 +3,7 @@ import { IndexLink, Link } from "react-router";
 import Cookies from 'js-cookie';
 import createHistory from 'history/createBrowserHistory';
 
+
 const history = createHistory({
   forceRefresh: true
 })

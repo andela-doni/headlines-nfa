@@ -6,7 +6,7 @@ import { Actions } from '../utils/AppConstants';
 const CHANGE_EVENT = 'change';
 
 const ArticlesStore = assign({}, EventEmitter.prototype, {
-  // Actual collection of model data
+  // Initializing articles, sources and sortby
   articles: [],
   source: '',
   sortBy: '',
