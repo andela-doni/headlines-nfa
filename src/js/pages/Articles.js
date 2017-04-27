@@ -5,6 +5,7 @@ import { getSources } from '../actions/SourcesActions';
 import { getSorts } from '../actions/SortActions';
 import SortStore from '../stores/SortStore';
 
+
 export default class Articles extends React.Component {
   constructor() {
     super();
@@ -14,7 +15,6 @@ export default class Articles extends React.Component {
     };
 
     this.getArticles = this.getArticles.bind(this);
-    this.handleClick = this.handleClick.bind(this)
   }
 
 
@@ -53,6 +53,7 @@ export default class Articles extends React.Component {
       <div class="jumbotron">
         <h1>Headlines articles</h1>
         <p>Articles from over 70 sources</p>
+
         <div>
             <select class="form-control" id="select" onChange={this.handleChange.bind(this)}>{sorts.map(function(type,index){
                   return <option value = {type}>{type}</option>;
