@@ -55,7 +55,7 @@ export default class Articles extends React.Component {
         <p>Articles from over 70 sources</p>
 
         <div>
-            <select class="form-control" id="select" onChange={this.handleChange.bind(this)}>{sorts.map(function(type,index){
+            <select className="form-control" id="select" onChange={this.handleChange.bind(this)}>{sorts.map(function(type,index){
                   return <option value = {type}>{type}</option>;
               })}</select>
         </div>

@@ -53,11 +53,11 @@ export default class Welcome extends React.Component {
    const filteredSources = this.state.sources.filter(source=>source.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1); 
   
     return(
-    <div class="jumbotron">
+    <div className="jumbotron">
       <h1>Headlines</h1>
       <p>News from over 70 sources
       </p>
-        <input class = "searchbox col col-lg-12" value={this.state.search} onChange={this.handleChange.bind(this)}/>
+        <input className = "searchbox col col-lg-12" value={this.state.search} onChange={this.handleChange.bind(this)}/>
       <div>
     
       {filteredSources.map(source=>{
