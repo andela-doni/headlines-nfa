@@ -16,12 +16,10 @@ export default class Layout extends React.Component {
     super(props);
     this.login = this.login.bind(this);
     this.state = this.userState();
-    console.log(this.state);
   }
 
   componentDidMount() {
     AuthenticationStore.addChangeListener(this.login);
-    isLoggin();
   }
   componentWillUnmount() {
     AuthenticationStore.removeChangeListener(this.login)
@@ -36,19 +34,12 @@ export default class Layout extends React.Component {
     }
   }
 
-
   render() {
-    console.log('user logged in', this.state.user.isAuthenticated)
     const { location } = this.props;
     const containerStyle = {
       marginTop: "60px"
     }; //console.log(this.state.user);
 
-    if (!this.state.user.isAuthenticated) {
-      return (<div>
-                <Login />
-               </div>)
-    }
       return (
 
       <div>
@@ -59,9 +50,7 @@ export default class Layout extends React.Component {
               <div class="row">
                 <div class="col-lg-12">
                   <h1>Headlines</h1>
-
                   {this.props.children}
-
                 </div>
               </div>
               <Footer />

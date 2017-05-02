@@ -58,7 +58,7 @@
     "build": "webpack -p",
     "watch": "webpack --watch",
     "serve": "serve index.html",
-    "dev": "webpack -d --watch",
+    "dev": "webpack -d --watch & node server.js",
     "prestart": "webpack -p",
     "start": "node server.js",
     "test": "jest",

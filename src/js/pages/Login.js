@@ -1,11 +1,11 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login';
 import Cookies from 'js-cookie';
-import createHistory from 'history/createBrowserHistory';
+import { browserHistory } from "react-router";
+import AuthenticationStore from '../stores/AuthenticationStore';
+import { isLoggin } from '../actions/AuthenticationAction';
 
-const history = createHistory({
-  forceRefresh: true
-})
+
 //fetches user info and stores it in a cookie called debprojdb
 const responseGoogle = (response) => {
   const {name, email, imageUrl} = response.profileObj;
@@ -15,7 +15,8 @@ const responseGoogle = (response) => {
     image: imageUrl
   };
   Cookies.set('debprojdb', user_details);
-  history.push('/');
+  isLoggin();
+  browserHistory.push('/');
 };
 
 
@@ -32,4 +33,4 @@ export default class Login extends React.Component {
       </div>
     )
   }
-}
+};

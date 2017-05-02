@@ -47,6 +47,7 @@ export default class Welcome extends React.Component {
   }
 
   render() {
+    console.log('filteredSources',filteredSources);
    const {sources} = this.state;   
    console.log(this.state, "sources");
    
@@ -69,7 +70,6 @@ export default class Welcome extends React.Component {
                       <h4><Link to ={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>{source.name}</Link></h4>
                           <p>{source.description}</p>
                       </div>                      
-
         })}
       </div>
       </div>
