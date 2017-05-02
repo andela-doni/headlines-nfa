@@ -3,7 +3,7 @@ var path = require('path');
 
 // Create new app
 const app = express();
-const port = process.env.PORT || 3030;
+const port = process.env.PORT || 8000;
 
 app.use(express.static('src'));
 
