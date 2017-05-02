@@ -35,6 +35,7 @@
     "react-dom": "^15.5.4",
     "react-google-login": "^2.8.6",
     "react-router": "^2.5.2",
+    "react-test-renderer": "^15.5.4",
     "request": "^2.81.0",
     "superagent": "^3.5.2",
     "webpack": "^1.12.9",
@@ -42,19 +43,34 @@
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
+    "babel-jest": "^19.0.0",
+    "enzyme": "^2.8.2",
+    "enzyme-to-json": "^1.5.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3"
+    "eslint-plugin-react": "^6.10.3",
+    "jest": "^19.0.2",
+    "react-addons-test-utils": "^15.5.1"
   },
   "scripts": {
-    "test": "./hello.js",
     "build": "webpack -p",
     "watch": "webpack --watch",
     "serve": "serve index.html",
     "dev": "webpack -d --watch",
     "prestart": "webpack -p",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ]
   }
 }

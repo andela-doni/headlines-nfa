@@ -2,16 +2,14 @@ import { EventEmitter } from 'events';
 import assign from 'object-assign';
 import AppDispatcher from '../utils/AppDispatcher';
 import { Actions } from '../utils/AppConstants';
-
 const CHANGE_EVENT = 'change';
-
-const ArticlesStore = assign({}, EventEmitter.prototype, {
-  // Initializing articles, sources and sortby
+const SortStore = assign({}, EventEmitter.prototype, {
+  // Actual collection of model data
   articles: [],
   source: '',
   sortBy: '',
 
-  // Accessor method we'll use later
+    // Accessor method we'll use later
   getAll() {
     return this.articles;
   },
@@ -32,15 +30,14 @@ const ArticlesStore = assign({}, EventEmitter.prototype, {
 AppDispatcher.register((payload) => {
   console.log('payload res', payload.response);
   switch (payload.type) {
-    case Actions.GET_ARTICLES:
-      if (ArticlesStore.articles.length > 0) ArticlesStore.articles.list = [];
-      ArticlesStore.articles = [...payload.response.articles, ...ArticlesStore.articles];
-      ArticlesStore.source = payload.response.source;
-      ArticlesStore.sortBy = payload.response.sortBy;
-      ArticlesStore.emitChange();
+    case Actions.SORT_ARTICLES:
+      if (SortStore.articles.length > 0) SortStore.articles.list = [];
+      SortStore.articles = [...payload.response.articles, ...SortStore.articles];
+      SortStore.source = payload.response.source;
+      SortStore.sortBy = payload.response.sortBy;
+      SortStore.emitChange();
       break;
   }
 });
 
-export default ArticlesStore;
-
+export default SortStore;

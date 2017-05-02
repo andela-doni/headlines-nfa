@@ -3,6 +3,7 @@ import { IndexLink, Link } from "react-router";
 import Cookies from 'js-cookie';
 import createHistory from 'history/createBrowserHistory';
 
+
 const history = createHistory({
   forceRefresh: true
 })
@@ -56,9 +57,9 @@ export default class Nav extends React.Component {
               <li class={welcomeClass}>
                 <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Welcome</IndexLink>
               </li>
-              <li class={articlesClass}>
+              {/*<li class={articlesClass}>
                 <Link to="/articles" onClick={this.toggleCollapse.bind(this)}>Articles</Link>
-              </li>
+              </li>*/}
             </ul>
           </div>
         </div>

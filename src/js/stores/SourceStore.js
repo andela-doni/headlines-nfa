@@ -31,6 +31,7 @@ AppDispatcher.register((payload) => {
   switch (payload.type) {
     case Actions.GET_SOURCES:
       SourceStore.sources = payload.query;
+      console.log('payload', payload.query[0]);
       SourceStore.emitChange();
       break;
   }
