@@ -3,11 +3,11 @@ import { Link } from "react-router";
 import Cookies from 'js-cookie';
 import Footer from "../components/layout/Footer";
 import Nav from "../components/layout/Nav";
-const isLoggedIn = Cookies.get('debprojdb');
 import createHistory from 'history/createBrowserHistory';
 import AuthenticationStore from '../stores/AuthenticationStore';
 import { isLoggin } from '../actions/AuthenticationAction';
 import Login from './Login';
+const isLoggedIn = Cookies.get('debprojdb');
 const history = createHistory({
   forceRefresh: true
 })
@@ -34,12 +34,11 @@ export default class Layout extends React.Component {
       user: AuthenticationStore.getUser()
     }
   }
-
-  render() {
-    const { location } = this.props;
-    const containerStyle = {
-      marginTop: "60px"
-    }; //console.log(this.state.user);
+render() {
+  const { location } = this.props;
+  const containerStyle = {
+    marginTop: "60px"
+  }; //console.log(this.state.user);
 
       return (
 

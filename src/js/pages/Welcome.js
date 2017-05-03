@@ -10,9 +10,10 @@ import {getArticles} from '../actions/ArticlesActions';
 export default class Welcome extends React.Component { 
   constructor(){
     super();
+    
     this.state ={
       sources: SourceStore.getAll(),
-      search: ""
+      search: ''
     };
     this.getSources = this.getSources.bind(this);
   }
@@ -65,11 +66,9 @@ export default class Welcome extends React.Component {
         //console.log(source.sortBysAvailable, 'eachsource')
         {/*//console.log('this.props.location.query', this.props.location.query);*/}
             return <div key={source.id}>
-
-                 
-                      <h4><Link to ={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>{source.name}</Link></h4>
-                          <p>{source.description}</p>
-                      </div>                      
+               <h4><Link to ={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>{source.name}</Link></h4>
+                  <p>{source.description}</p>
+                   </div>                      
         })}
       </div>
       </div>

@@ -23,14 +23,7 @@ describe('Welcome Component with news sources',() => {
      })
 });
 
-// describe('helper functions testing'() => { 
-//     describe('getSources()'() => {
-//    const news  = {
-//      sources: 'CNN',
-//    }
-//     })
 
-// })
 const wrapper = mount(<Welcome />);
 sinon.spy(Welcome.prototype, 'componentDidMount');
 
@@ -38,8 +31,10 @@ describe('if component mounted function exists',() => {
   it(' componentDidMount exists', () => {
     expect(Welcome.prototype.componentDidMount.calledOnce).toExist;  
   });
-  // it(' componentDidMount mounted', () => {
-  //   expect(Welcome.prototype.componentDidMount).toequal(true);  
-  // });
+
+  it(' componentWillUnMount exists', () => {
+    expect(Welcome.prototype.componentWillUnMount.calledOnce).toExist;  
+  });
+
 
 })

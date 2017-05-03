@@ -44,10 +44,11 @@ export default class Articles extends React.Component {
 
   render() {
     //console.log("params of article", this.props.location.query)
-    let sorts = this.props.location.query.sort
-    sorts = sorts.split(',');
+    let sorts = this.props && this.props.location && this.props.location.query.sort
+    //let sorts = this.props.location.query.sort
+    sorts = sorts && sorts.split(',');
     console.log('sorts', sorts)
-    const { articles } = this.state;
+   const articles = this.state.articles;
     //console.log(this.state);
     return (
       <div class="jumbotron">

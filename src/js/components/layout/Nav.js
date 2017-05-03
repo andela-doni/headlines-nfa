@@ -19,16 +19,15 @@ export default class Nav extends React.Component {
     };
     this.logout = this.logout.bind(this);
   }
-
   toggleCollapse() {
     const collapsed = !this.state.collapsed;
     this.setState({collapsed});
   }
-  componentWillMount(){
+  // componentWillMount(){
     // if(this.state.user === undefined){
     //   history.push('/login')
     // }
-  }
+  // }
 
   logout(){
     logout();
@@ -36,11 +35,11 @@ export default class Nav extends React.Component {
   }
 
   render() {
-    const { location, isLoggedIn } = this.props;
+    const { location } = this.props;
     const { collapsed, user } = this.state;
-    const welcomeClass = location.pathname === "/" ? "active" : "";
-    const loginClass = location.pathname.match(/^\/login/) ? "active" : "";
-    const articlesClass = location.pathname.match(/^\/articles/) ? "active" : "";
+    const welcomeClass = location && location.pathname === "/" ? "active" : "";
+    const loginClass = location && location.pathname && location.pathname.match(/^\/login/) ? "active" : "";
+    const articlesClass = location && location.pathname && location.pathname.match(/^\/articles/) ? "active" : "";
 
     const navClass = collapsed ? "collapse" : "";
     
@@ -72,4 +71,8 @@ export default class Nav extends React.Component {
       </nav>
     );
   }
+}
+
+Nav.defaultProps = {
+  location: "/"
 }
