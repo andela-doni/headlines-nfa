@@ -16,6 +16,7 @@ export default class Layout extends React.Component {
     super(props);
     this.login = this.login.bind(this);
     this.state = this.userState();
+    
   }
 
   componentDidMount() {

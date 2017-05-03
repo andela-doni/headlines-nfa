@@ -42,7 +42,7 @@ AppDispatcher.register((payload) => {
       AuthenticationStore.emitChange();
       break;
     default:
-      console.log('fix');
+      //console.log('fix');
       break;
   }
   return true;

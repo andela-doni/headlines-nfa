@@ -7,7 +7,7 @@ import AppDispatcher from '../utils/AppDispatcher';
  * @returns {nothing}.
  */
 export function isLoggin() {
-  const stringUser = Cookies.get('debprojdb') || false; // false so undefined is not passed to JSON.parse
+  const stringUser = Cookies.get('debprojdb') || false; // false so that undefined is not passed to JSON.parse
   const user = JSON.parse(stringUser);
   AppDispatcher.dispatch({
     type: Actions.LOGIN,
