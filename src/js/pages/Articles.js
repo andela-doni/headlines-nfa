@@ -1,6 +1,6 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import Icon, { Telegram } from 'react-share-icons';
+import Icon  from 'react-share-icons';
 import Instagram from 'react-share-icons/lib/Instagram';
 import ArticlesStore from '../stores/ArticlesStore';
 import { getArticles } from '../actions/ArticlesActions';
