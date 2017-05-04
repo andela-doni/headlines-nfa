@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from 'prop-types';
 import SourceStore from '../stores/SourceStore';
 import { getSources } from '../actions/SourcesActions';
 import Articles from './Articles'
@@ -12,7 +12,7 @@ export default class Welcome extends React.Component {
     super();
     this.state = {
       sources: SourceStore.getAll(),
-      search: ""
+      search: ''
     };
     this.getSources = this.getSources.bind(this);
   }

@@ -1,6 +1,6 @@
 import React from 'react';
-import Clearfix from 'react-clearfix';
-import Icon, { Telegram } from 'react-share-icons';
+// import PropTypes from 'prop-types';
+import Icon  from 'react-share-icons';
 import Instagram from 'react-share-icons/lib/Instagram';
 import ArticlesStore from '../stores/ArticlesStore';
 import { getArticles } from '../actions/ArticlesActions';
@@ -47,10 +47,11 @@ export default class Articles extends React.Component {
 
   render() {
     //console.log("params of article", this.props.location.query)
-    let sorts = this.props.location.query.sort
-    sorts = sorts.split(',');
+    let sorts = this.props && this.props.location && this.props.location.query.sort
+    //let sorts = this.props.location.query.sort
+    sorts = sorts && sorts.split(',');
     console.log('sorts', sorts)
-    const { articles } = this.state;
+   const articles = this.state.articles;
     //console.log(this.state);
     return (
       <div >
@@ -73,7 +74,7 @@ export default class Articles extends React.Component {
                      <a href="https://www.facebook.com/sharer/sharer.php?u={articles.url}" target="_blank"> <Icon type="Facebook" className="shares-facebook" width ="3em" height="3em" color="#333"/></a>
                      <a href="http://twitter.com/share?text=Articles&url<?=urlencode($url)?>"target="_blank"title="Click to post to Twitter"> <Icon type="Twitter" className="shares-twitter" width ="3em" height="3em"/></a>
                      <a href=""><Instagram className="shares-instagram" width ="3em" height="3em"/></a>
-                    {/*<Clearfix/>*/}
+                    
                   </div>
                 </div>
               </div>
