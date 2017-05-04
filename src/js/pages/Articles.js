@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Clearfix from 'react-clearfix';
 import Icon, { Telegram } from 'react-share-icons';
 import Instagram from 'react-share-icons/lib/Instagram';
