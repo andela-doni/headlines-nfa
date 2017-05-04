@@ -2,5 +2,4 @@ language: node_js
 node_js:
  - 6.10.1
  test: "npm run test:coverage"
-
  after_success: "cat ./coverage/lcov.info | coveralls"

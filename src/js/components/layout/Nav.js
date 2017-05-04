@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { IndexLink, Link, browserHistory } from "react-router";
 import Cookies from 'js-cookie';
 import createHistory from 'history/createBrowserHistory';
