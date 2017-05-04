@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/andela-doni/headlines-nfa.svg?branch=dev)](https://travis-ci.org/andela-doni/headlines-nfa)
 [![Coverage Status](https://coveralls.io/repos/github/andela-doni/headlines-nfa/badge.svg?branch=master)](https://coveralls.io/github/andela-doni/headlines-nfa?branch=dev)
-[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
 
 # HEADLINES
 Headlines is a new app that displays published articles and sources from well-known and reliable sources. It fetches this data by consming an api called NewsApi that returns JSON metadata for published articles on a range of news sources and blogs. This application is similar to a mordern RSS feed.
