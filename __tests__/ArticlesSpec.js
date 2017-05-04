@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactTestUtils from 'react-dom/test-utils';
+// import ReactTestUtils from 'react-dom/test-utils';
 import expect from 'expect';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
