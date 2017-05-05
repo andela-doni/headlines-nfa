@@ -5,6 +5,8 @@ import { Actions } from '../src/js/utils/AppConstants';
 import SortStore from '../src/js/stores/SortStore';
 import sinon from 'sinon';
 
+/*eslint-disable no-unused-expressions*/
+
 jest.mock('../src/js/utils/AppDispatcher');
 jest.dontMock('../src/js/stores/SortStore');
 jest.dontMock('object-assign');
