@@ -18,13 +18,13 @@ describe('SortStore',() => {
             popular:'popular'
         }]
   };
-let callback;
+let onSuccess;
 
 beforeEach(() => {
-  callback = AppDispatcher.register.mock.calls [0][0];
+  onSuccess = AppDispatcher.register.mock.calls [0][0];
 })
 
-test('registers callback with dispatcher', () => {
+test('registers onSuccess callback with dispatcher', () => {
   expect(AppDispatcher.register.mock.calls.length).toBe(1);
 })
 
@@ -34,7 +34,7 @@ test('The store initializes with no data', () => {
 })
 
 test('registers tthe right payload', () => {
-  callback(action); //eslint-disable-line
+  onSuccess(action); 
   const allInfo = SortStore.getAll();
   
   console.log(Object.keys,'obj');
@@ -56,12 +56,12 @@ test('check if there is a remove change listener method', () => {
 describe('change listener functions', () => {
   let onChange;
   let removeChange; 
- let  callback = (() => {
+ let  onSuccess = (() => {
     return 'news';
   })
 
-  SortStore.addChangeListener(callback)
-  SortStore.removeChangeListener(callback)
+  SortStore.addChangeListener(onSuccess)
+  SortStore.removeChangeListener(§s)
   SortStore.emitChange()
   expect(SortStore.on).toExist
   expect(SortStore.removeListener).toExist

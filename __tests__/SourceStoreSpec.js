@@ -20,13 +20,13 @@ describe('SourceStore',() => {
       description:'Hello how are you'
     }] 
   };
-let callback;
+let onSuccess;
 
 beforeEach(() => {
-  callback = AppDispatcher.register.mock.calls [0][0];
+  onSuccess = AppDispatcher.register.mock.calls [0][0];
 })
 
-test('registers callback with dispatcher', () => {
+test('registers onSuccess with dispatcher', () => {
   expect(AppDispatcher.register.mock.calls.length).toBe(1);
 })
 
@@ -36,7 +36,7 @@ test('The store initializes with no data', () => {
 })
 
 test('registers tthe right payload', () => {
-  callback(action);
+  onSuccess(action);
   const allInfo = SourceStore.getAll();
   
   console.log(Object.keys,'obj');
@@ -59,7 +59,7 @@ test('check if there is a remove change listener method', () => {
 describe('change listener functions', () => {
   let onChange;
   let removeChange; 
- let  callback = (() => {
+  let  callback = (() => {
     return 'news';
   })
 
