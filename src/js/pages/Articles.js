@@ -68,13 +68,9 @@ export default class Articles extends React.Component {
               <div class="row">
                 <div className="col-md-4 "><img class="card-img-top img-responsive " src={article.urlToImage} alt="Card image cap"></img></div>
                 <div className="panel panel-default  col-md-8" key={article.url}>
-                  <div className="panel-heading"><a href={article.url} target="_blank">Title: {article.title}</a> {article.publishedAt}</div>
+                  <div className="panel-heading"><a href={article.url} target="_blank">Title: {article.title}</a></div>
                   <div className="panel-body">
                     <p> {article.description} </p>
-                     <a href="https://www.facebook.com/sharer/sharer.php?u={articles.url}" target="_blank"> <Icon type="Facebook" className="shares-facebook" width ="3em" height="3em" color="#333"/></a>
-                     <a href="http://twitter.com/share?text=Articles&url<?=urlencode($url)?>"target="_blank"title="Click to post to Twitter"> <Icon type="Twitter" className="shares-twitter" width ="3em" height="3em"/></a>
-                     <a href=""><Instagram className="shares-instagram" width ="3em" height="3em"/></a>
-                    
                   </div>
                 </div>
               </div>
