@@ -34,7 +34,7 @@ test('The store initializes with no data', () => {
 })
 
 test('registers tthe right payload', () => {
-  callback(action);
+  callback(action); //eslint-disable-line
   const allInfo = SortStore.getAll();
   
   console.log(Object.keys,'obj');
