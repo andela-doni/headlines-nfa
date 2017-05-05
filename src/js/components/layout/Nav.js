@@ -59,7 +59,7 @@ export default class Nav extends React.Component {
            
             <ul className="nav navbar-nav">
               <li className={loginClass}>
-                <button className= "btn btn-info" onClick={this.logout}>Logout</button>
+                <li className= "btn btn-info" onClick={this.logout}>Logout</li>
               </li>
         
               <li className={welcomeClass}>

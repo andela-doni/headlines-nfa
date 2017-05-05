@@ -20,10 +20,8 @@ export default class Articles extends React.Component {
     this.getArticles = this.getArticles.bind(this);
   }
 
-
-
   componentDidMount() {
-
+    if (!this.props.params) return;
     getArticles(this.props.params.article, 'top');
     ArticlesStore.addChangeListener(this.getArticles);
   }
@@ -56,13 +54,15 @@ export default class Articles extends React.Component {
     return (
       <div >
         <div>
-          <select className="form-control" id="select" onChange={this.handleChange.bind(this)}>{sorts.map(function (type, index) {
-            return <option value={type}>{type}</option>;
-          })}</select>
+          <select className="form-control" id="select" onChange={this.handleChange.bind(this)}>
+            {sorts && sorts.map(function (type, index) {
+              return <option value={type}>{type}</option>;
+            })}
+          </select>
         </div>
 
         <div className="card-group">
-          {articles.map((article, index) => {
+          {articles && articles.map((article, index) => {
             //console.log(article);
             return (
               <div class="row">
