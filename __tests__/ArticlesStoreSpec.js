@@ -5,7 +5,7 @@ import { Actions } from '../src/js/utils/AppConstants';
 import ArticlesStore from '../src/js/stores/ArticlesStore';
 import sinon from 'sinon';
 
-
+/*eslint-disable no-unused-expressions*/
 
 jest.mock('../src/js/utils/AppDispatcher');
 jest.dontMock('../src/js/stores/ArticlesStore');
@@ -22,13 +22,13 @@ describe('ArticlesStore',() => {
       description:'Hello how are you'
     }] 
   };
-let callback;
+let onSuccess;
 
 beforeEach(() => {
-  callback = AppDispatcher.register.mock.calls [0][0];
+  onSuccess = AppDispatcher.register.mock.calls [0][0];
 })
 
-test('registers callback with dispatcher', () => {
+test('registers onSuccess with dispatcher', () => {
   expect(AppDispatcher.register.mock.calls.length).toBe(1);
 })
 
@@ -38,7 +38,7 @@ test('The store initializes with no data', () => {
 })
 
 test('registers tthe right payload', () => {
-  callback(action);
+  onSuccess(action);
   const allInfo = ArticlesStore.getAll();
   
   console.log(Object.keys,'obj');

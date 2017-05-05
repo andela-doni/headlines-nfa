@@ -56,12 +56,12 @@ test('check if there is a remove change listener method', () => {
 describe('change listener functions', () => {
   let onChange;
   let removeChange; 
- let  onSuccess = (() => {
+ let  callback = (() => {
     return 'news';
   })
 
-  SortStore.addChangeListener(onSuccess)
-  SortStore.removeChangeListener(§s)
+  SortStore.addChangeListener(callback)
+  SortStore.removeChangeListener(callback)
   SortStore.emitChange()
   expect(SortStore.on).toExist
   expect(SortStore.removeListener).toExist

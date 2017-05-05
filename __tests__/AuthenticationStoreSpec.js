@@ -5,6 +5,8 @@ import { Actions } from '../src/js/utils/AppConstants';
 import AuthenticationStore from '../src/js/stores/AuthenticationStore';
 import sinon from 'sinon';
 
+/*eslint-disable no-unused-expressions*/
+
 jest.mock('../src/js/utils/AppDispatcher');
 jest.dontMock('../src/js/stores/AuthenticationStore');
 jest.dontMock('object-assign');
@@ -29,7 +31,6 @@ beforeEach(() => {
 test('registers callback with dispatcher', () => {
   expect(AppDispatcher.register.mock.calls.length).toBe(1);
 })
-
 
 test('check if there is an emit change listener method added', () => {
   expect(AuthenticationStore.emitChange).toExist;
