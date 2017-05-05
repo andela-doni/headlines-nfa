@@ -5,7 +5,7 @@ import { Actions } from '../utils/AppConstants';
 
 const CHANGE_EVENT = 'change';
 
-const ArticlesStore = assign({}, EventEmitter.prototype, {
+export const ArticlesStore = assign({}, EventEmitter.prototype, {
   // Initializing articles, sources and sortby
   articles: [],
   source: '',
