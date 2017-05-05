@@ -1,8 +1,8 @@
 import Cookies from 'js-cookie';
 import { Actions } from '../utils/AppConstants';
 import AppDispatcher from '../utils/AppDispatcher';
-
 /**
+ * Gets the cookie info and dispatches the LOGIN action
  * Stores user information, stringUser and converts into an object.
  * @returns {nothing}.
  */
@@ -14,9 +14,9 @@ export function isLoggin() {
     user
   });
 }
-
 /**
  * Clears user information after the user has logged out.
+ * Dispatches the logout action
  * @returns {nothing}.
  */
 export function logout() {

@@ -4,7 +4,11 @@ import AppDispatcher from '../utils/AppDispatcher';
 
 const url = 'https://newsapi.org/v1/articles';
 const API = '213327409d384371851777e7c7f78dfe';
-
+/**
+ * Api call for sorts.
+ * Dispatches SORT_ARTICLES actions
+ * @returns {console.error} if the api call is not available.
+ */
 export function getSorts(sortBy) {
   request.get(url)
     .set('api', API)
@@ -12,7 +16,6 @@ export function getSorts(sortBy) {
     .end((err, response) => {
       if (err) return console.error(err);
       const result = JSON.parse(response.text);
-      console.log(result);
       AppDispatcher.dispatch({
         type: Actions.SORT_ARTICLES,
         response: result,
