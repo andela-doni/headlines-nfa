@@ -5,6 +5,8 @@ import { Actions } from '../src/js/utils/AppConstants';
 import ArticlesStore from '../src/js/stores/ArticlesStore';
 import sinon from 'sinon';
 
+
+
 jest.mock('../src/js/utils/AppDispatcher');
 jest.dontMock('../src/js/stores/ArticlesStore');
 jest.dontMock('object-assign');
