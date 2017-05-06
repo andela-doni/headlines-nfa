@@ -19,7 +19,6 @@ export default class Welcome extends React.Component {
 
   componentWillMount() {
     // SourceStore.on(this.getSources);
-
   }
 
   componentDidMount() {
@@ -39,37 +38,44 @@ export default class Welcome extends React.Component {
   }
 
   handleChange(event) {
-    //const searchedSources = e.target.value;
-    //this.changeSources(this.state.sources);
-    //console.log(event);
     this.setState({ search: event.target.value })
-    //console.log(this.state.search, "search");
   }
 
   render() {
     const { sources } = this.state;
     console.log(this.state, "sources");
 
-    const filteredSources = this.state.sources.filter(source => source.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1);
+    const filteredSources = this.state.sources
+      .filter(source => source.name
+      .toLowerCase()
+      .indexOf(this.state.search.toLowerCase()) !== -1);
 
     return (
       <div>
         <p>News from over 70 sources
       </p>
         <div>
-        <input className="searchbox col col-lg-12" type="text" class="form-control" value={this.state.search} onChange={this.handleChange.bind(this)} />
+        <input className="searchbox col col-lg-12" 
+          type="text" class="form-control" 
+          value={this.state.search} 
+          onChange={this.handleChange.bind(this)} />
         </div>
-        
         <div className="card-deck">
         <div className ="row">
           {filteredSources.map(source => {
             return <div className="panel panel-default col-md-4" key={source.id}>
               <div className="panel-heading">
-                <p className="text-info panel-title"><Link to={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>{source.name}</Link></p>
+                <p className="text-info panel-title">
+                  <Link to={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>
+                  {source.name}
+                  </Link>
+              </p>
               </div>
               <div className="panel-body ">
                <p className="text-info"> {source.description} </p>
-               <a type="button" class="btn-floating btn-small btn-fb"><i class="fa fa-facebook"></i></a>
+               <a type="button" class="btn-floating btn-small btn-fb">
+                 <i class="fa fa-facebook"></i>
+              </a>
               </div>
             </div>
           })}
