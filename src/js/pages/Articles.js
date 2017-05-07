@@ -38,6 +38,8 @@ export default class Articles extends React.Component {
       && this.props.location 
       && this.props.location.query.sort
     sorts = sorts && sorts.split(',');
+    const articles = this.state.articles;
+
     return (
        <div >
         <div >
@@ -50,8 +52,7 @@ export default class Articles extends React.Component {
           </select>
 
         </div>
-        <br/>
-        <br/>
+        <br/><br/>
 
         <div className="card-columns border-top-10">
           {articles && articles.map((article, index) => {
