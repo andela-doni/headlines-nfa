@@ -48,6 +48,7 @@ export default class Nav extends React.Component {
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
           <div className="navbar-header">
+             <a class="navbar-brand">Headlines</a>
             <button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
@@ -56,14 +57,12 @@ export default class Nav extends React.Component {
             </button>
           </div>
           <div className={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
-           
-            <ul className="nav navbar-nav">
-              <li className={loginClass}>
-                <li className= "btn btn-info" onClick={this.logout}>Logout</li>
-              </li>
-        
+            <ul className="nav navbar-nav  pull-right">
               <li className={welcomeClass}>
                 <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Welcome</IndexLink>
+              </li>
+              <li className={loginClass}>
+                <Link to="/login" onClick={this.logout}>Logout</Link>
               </li>
             </ul>
           </div>
@@ -74,6 +73,3 @@ export default class Nav extends React.Component {
   }
 }
 
-Nav.defaultProps = {
-  location: "/"
-}

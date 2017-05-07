@@ -38,39 +38,37 @@ export default class Articles extends React.Component {
       && this.props.location 
       && this.props.location.query.sort
     sorts = sorts && sorts.split(',');
+    const articles = this.state.articles;
+
     return (
-      <div >
-        <div>
-          <select className="form-control" id="select" 
-            onChange={this.handleChange.bind(this)}>
+       <div >
+        <div >
+          <br/>
+          <h5 >Sort by:</h5>
+          <select id="select" onChange={this.handleChange.bind(this)}>
             {sorts && sorts.map(function (type, index) {
               return <option value={type}>{type}</option>;
             })}
           </select>
-        </div>
 
-        <div className="card-group">
+        </div>
+        <br/><br/>
+
+        <div className="card-columns border-top-10">
           {articles && articles.map((article, index) => {
             //console.log(article);
             return (
-              <div class="row">
-                <div className="col-md-4 ">
-                  <img 
-                  class="card-img-top img-responsive " 
-                  src={article.urlToImage} 
-                  alt="Card image cap">
-                </img>
-              </div>
-                <div className="panel panel-default  col-md-8" 
-                  key={article.url}>
-                  <div className="panel-heading">
-                    <a href={article.url} target="_blank">Title: {article.title}</a>
-                </div>
-                  <div className="panel-body">
-                    <p> {article.description} </p>
-                  </div>
-                </div>
-              </div>
+            <div className ="card-deck">
+            <div className= "row">
+              <img className="card-img-top img-responsive col-md-4" src= {article.urlToImage} alt={article.title}></img>
+              <div></div>
+              <div className="card-block col-md-8 border-raduis">
+              <h4 className="card-title">{article.title}</h4>
+              <p className="card-text">{article.description}</p> 
+              <a href={article.url} target="_blank" className="btn btn-danger">More ...</a>       
+              </div>   
+           </div>   
+           </div>
             )
           })}
         </div>
