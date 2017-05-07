@@ -1,7 +1,13 @@
 import request from 'superagent';
 import { Actions } from '../utils/AppConstants';
 import AppDispatcher from '../utils/AppDispatcher';
-
+/**
+ * Api call for sources.
+ * requests for news sources from api
+ * lists sources according to alphabetical order by default
+ * Dispatches GET_SOURCES actions
+ * @returns {console.error} if the api call is not available.
+ */
 export const sourcesCallback = (err, response) => {
   if (err) return console.error(err);
       const result = JSON.parse(response.text);

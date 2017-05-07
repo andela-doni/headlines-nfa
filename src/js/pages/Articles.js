@@ -8,7 +8,6 @@ import { getSources } from '../actions/SourcesActions';
 import { getSorts } from '../actions/SortActions';
 import SortStore from '../stores/SortStore';
 
-
 export default class Articles extends React.Component {
   constructor() {
     super();
@@ -16,41 +15,29 @@ export default class Articles extends React.Component {
       articles: ArticlesStore.getAll(),
       sortType: ''
     };
-
     this.getArticles = this.getArticles.bind(this);
   }
-
   componentDidMount() {
     if (!this.props.params) return;
     getArticles(this.props.params.article, 'top');
     ArticlesStore.addChangeListener(this.getArticles);
   }
-
   componentWillUnMount() {
     SourceStore.removeChangeListener(this.getArticles);
   }
-
   getArticles() {
     this.setState({
       articles: ArticlesStore.getAll()
     });
   }
-
   handleChange(event) {
-    console.log('events', event.target.value)
-    console.log()
     this.setState(getArticles(this.props.params.article, event.target.value));
   }
-
-
   render() {
-    //console.log("params of article", this.props.location.query)
-    let sorts = this.props && this.props.location && this.props.location.query.sort
-    //let sorts = this.props.location.query.sort
+    let sorts = this.props 
+      && this.props.location 
+      && this.props.location.query.sort
     sorts = sorts && sorts.split(',');
-    console.log('sorts', sorts)
-   const articles = this.state.articles;
-    //console.log(this.state);
     return (
        <div >
         <div >
@@ -84,7 +71,6 @@ export default class Articles extends React.Component {
             )
           })}
         </div>
-
       </div>
     )
   }
