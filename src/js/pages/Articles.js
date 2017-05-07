@@ -52,32 +52,35 @@ export default class Articles extends React.Component {
    const articles = this.state.articles;
     //console.log(this.state);
     return (
-      <div >
-        <div>
-          <select className="form-control" id="select" onChange={this.handleChange.bind(this)}>
+       <div >
+        <div >
+          <br/>
+          <h5 >Sort by:</h5>
+          <select id="select" onChange={this.handleChange.bind(this)}>
             {sorts && sorts.map(function (type, index) {
               return <option value={type}>{type}</option>;
             })}
           </select>
-        </div>
 
-        <div className="card-group">
+        </div>
+        <br/>
+        <br/>
+
+        <div className="card-columns border-top-10">
           {articles && articles.map((article, index) => {
             //console.log(article);
             return (
-              <div class="row">
-                <div className="col-md-4 "><img class="card-img-top img-responsive " src={article.urlToImage} alt="Card image cap"></img></div>
-                <div className="panel panel-default  col-md-8" key={article.url}>
-                  <div className="panel-heading"><a href={article.url} target="_blank">Title: {article.title}</a> {article.publishedAt}</div>
-                  <div className="panel-body">
-                    <p> {article.description} </p>
-                     <a href="https://www.facebook.com/sharer/sharer.php?u={articles.url}" target="_blank"> <Icon type="Facebook" className="shares-facebook" width ="3em" height="3em" color="#333"/></a>
-                     <a href="http://twitter.com/share?text=Articles&url<?=urlencode($url)?>"target="_blank"title="Click to post to Twitter"> <Icon type="Twitter" className="shares-twitter" width ="3em" height="3em"/></a>
-                     <a href=""><Instagram className="shares-instagram" width ="3em" height="3em"/></a>
-                    
-                  </div>
-                </div>
-              </div>
+            <div className ="card-deck">
+            <div className= "row">
+              <img className="card-img-top img-responsive col-md-4" src= {article.urlToImage} alt={article.title}></img>
+              <div></div>
+              <div className="card-block col-md-8 border-raduis">
+              <h4 className="card-title">{article.title}</h4>
+              <p className="card-text">{article.description}</p> 
+              <a href={article.url} target="_blank" className="btn btn-danger">More ...</a>       
+              </div>   
+           </div>   
+           </div>
             )
           })}
         </div>

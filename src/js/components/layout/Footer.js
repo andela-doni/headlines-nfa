@@ -1,17 +1,16 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import { Footer } from 'react-materialize';
 
 
-export default class Footer extends React.Component {
+export default class Footers extends React.Component {
   render() {
     return (
-      <footer>
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Copyright &copy; Headlines</p>
-          </div>
-        </div>
-      </footer>
+      <footer className="footer">
+      <div className="container">
+        <span className="text-muted">Headlines 2017</span>
+      </div>
+    </footer>
     );
   }
 }

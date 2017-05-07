@@ -21,9 +21,9 @@ const onEnter = (nextState, replace) => {
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route>
+      <Route path="/login" name="login" component={Login} />
       <Route path="/" component={Layout}>
         <IndexRoute component={Welcome} onEnter={onEnter}/>
-        <Route path="/login" name="login" component={Login} />
         <Route path="/sources/:article" name="articles" component={Articles} onEnter={onEnter}/>
         <Route path="*" component={() => <h1>404</h1>}/>
       </Route>
