@@ -27,6 +27,13 @@ Headlines is a new app that displays published articles and sources from well-kn
 ## Deployment
 This application is deployed on heroku with this link (https://headlines-doni.herokuapp.com/)
 
+## Technologies 
+Headlines is built with Reactjs and Flux architecture. Nodejs and Express are used for server side development. The application and bundled with Webpack.
+
+1. React is front end library developed by Facebook. It's used for handling view layer for web and mobile apps. ReactJS allows us to create reusable UI components. It is currently one of the most popular JavaScript libraries and it has strong foundation and large community behind it.
+2. Flux is the application architecture that Facebook uses for building client-side web applications. It complements React's composable view components by utilizing a unidirectional data flow. It's more of a pattern rather than a formal framework.
+3. Webpack is a tool to build JavaScript modules in your application.
+
 
 
 
