@@ -55,12 +55,12 @@ export default class Welcome extends React.Component {
     return (
       <div>
         <br/> <br/>
-      <p>News from over 70 sources
-      </p>
+      <h3>News from over 70 sources
+      </h3>
         <div>
         <input className="searchbox col col-lg-12" type="text" class="form-control" value={this.state.search} onChange={this.handleChange.bind(this)} />
         </div>
-        
+        <br/><br/>
         
         <div className="card-deck">
         <div className ="row">
