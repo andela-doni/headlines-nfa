@@ -60,7 +60,7 @@ export default class Welcome extends React.Component {
         <div>
         <input className="searchbox col col-lg-12" type="text" class="form-control" value={this.state.search} onChange={this.handleChange.bind(this)} />
         </div>
-         <br/> <br/>
+        
         
         <div className="card-deck">
         <div className ="row">
