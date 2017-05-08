@@ -42,8 +42,9 @@ export default class Articles extends React.Component {
     return (
        <div >
         <div >
-          <h5 >Sort by:</h5>
-          <select id="select" onChange={this.handleChange.bind(this)}>
+          <br/>
+          <h5 className="text-left">Sort by:</h5>
+          <select id="select pull-left" onChange={this.handleChange.bind(this)}>
             {sorts && sorts.map(function (type, index) {
               return <option value={type}>{type}</option>;
             })}

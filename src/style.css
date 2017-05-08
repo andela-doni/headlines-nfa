@@ -166,8 +166,21 @@ body {
 }
 h5 {
     padding-top: 20px;
-    color: darkslateblue;
+    color: #044A8F;
 }
 input, button, select, textarea {
-    color: darkslateblue;
+    color: #044A8F;
+}
+.text-muted{
+    color:#044A8F;
+}
+select {
+    float: left !important;
+    height: 30px;
+    width: 100px;
+    padding-top: 10px;
+}
+img.card-img-top.img-responsive.col-md-4 {
+    padding-top:10px;
+    padding-bottom: 40px;
 }
