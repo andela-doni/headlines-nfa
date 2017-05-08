@@ -30,7 +30,6 @@ export const ArticlesStore = assign({}, EventEmitter.prototype, {
 });
 
 AppDispatcher.register((payload) => {
-  console.log('payload res', payload.response);
   switch (payload.type) {
     case Actions.GET_ARTICLES:
       if (ArticlesStore.articles.length > 0) ArticlesStore.articles.list = [];

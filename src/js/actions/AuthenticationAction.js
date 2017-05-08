@@ -21,7 +21,6 @@ export function isLoggin() {
  */
 export function logout() {
   Cookies.remove('debprojdb');
-    // history.pushState();
   AppDispatcher.dispatch({
     type: Actions.LOGOUT
   });

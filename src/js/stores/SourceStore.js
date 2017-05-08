@@ -5,8 +5,6 @@ import { Actions } from '../utils/AppConstants';
 
 const CHANGE_EVENT = 'change';
 const SourceStore = assign({}, EventEmitter.prototype, {
-
-
     // Actual collection of model data
   sources: [],
     // Accessor method we'll use later
@@ -31,7 +29,6 @@ AppDispatcher.register((payload) => {
   switch (payload.type) {
     case Actions.GET_SOURCES:
       SourceStore.sources = payload.query;
-      console.log('payload', payload.query[0]);
       SourceStore.emitChange();
       break;
   }

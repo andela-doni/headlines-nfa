@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import Icon  from 'react-share-icons';
 import Instagram from 'react-share-icons/lib/Instagram';
 import ArticlesStore from '../stores/ArticlesStore';
@@ -43,7 +42,6 @@ export default class Articles extends React.Component {
     return (
        <div >
         <div >
-          <br/>
           <h5 >Sort by:</h5>
           <select id="select" onChange={this.handleChange.bind(this)}>
             {sorts && sorts.map(function (type, index) {
@@ -56,16 +54,14 @@ export default class Articles extends React.Component {
 
         <div className="card-columns border-top-10">
           {articles && articles.map((article, index) => {
-            //console.log(article);
             return (
             <div className ="card-deck">
             <div className= "row">
               <img className="card-img-top img-responsive col-md-4" src= {article.urlToImage} alt={article.title}></img>
-              <div></div>
               <div className="card-block col-md-8 border-raduis">
               <h4 className="card-title">{article.title}</h4>
               <p className="card-text">{article.description}</p> 
-              <a href={article.url} target="_blank" className="btn btn-danger">More ...</a>       
+              <a href={article.url} target="_blank" className="btn btn-success">More ...</a>       
               </div>   
            </div>   
            </div>

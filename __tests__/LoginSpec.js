@@ -5,7 +5,6 @@ import GoogleLogin from 'react-google-login';
 import Login, { responseGoogle } from '../src/js/pages/Login';
 import Cookies from 'js-cookie';
 import { browserHistory } from 'react-router';
-// import browserHistory from 'history/createBrowserHistory';
 import sinon from 'sinon';
 
 
@@ -18,7 +17,6 @@ describe('Component with google login', () => {
   let logInButton;
   let googleSpy;
   beforeEach(() => {
-    // googleSpy = sinon.spy(logInButton.prototype, 'signIn');
     wrapper = setup();
   });
   
@@ -37,7 +35,6 @@ describe('Component with google login', () => {
 
 xit('should login', () => {
     logInButton = wrapper.find('button');
-    console.log(logInButton, 'this is login button')
     logInButton.simulate('click');
     // expect(googleSpy.calledOnce).to.equal(true);
     expect(true).toEqual(true);

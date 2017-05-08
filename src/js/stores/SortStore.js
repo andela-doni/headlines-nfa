@@ -28,7 +28,6 @@ const SortStore = assign({}, EventEmitter.prototype, {
 });
 
 AppDispatcher.register((payload) => {
-  console.log('payload res', payload.response);
   switch (payload.type) {
     case Actions.SORT_ARTICLES:
       if (SortStore.articles.length > 0) SortStore.articles.list = [];

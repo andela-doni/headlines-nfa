@@ -38,7 +38,7 @@ render() {
   const { location } = this.props;
   const containerStyle = {
     marginTop: "60px"
-  }; //console.log(this.state.user);
+  }; 
 
       return (
 

@@ -38,8 +38,6 @@ test('The store initializes with no data', () => {
 test('registers tthe right payload', () => {
   onSuccess(action); 
   const allInfo = SortStore.getAll();
-  
-  console.log(Object.keys,'obj');
   const keys = Object.keys(allInfo);
   expect(keys).toExist;
 })

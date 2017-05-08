@@ -1,6 +1,11 @@
 const debug = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 const path = require('path');
+const DotEnvPlugin = require('dotenv-webpack');
+
+const dotEnvPlugin = new DotEnvPlugin({
+  path: './.env',
+});
 
 module.exports = {
   context: path.join(__dirname, 'src'),
@@ -24,7 +29,10 @@ module.exports = {
     filename: 'client.min.js'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ]
+    new webpack.NoErrorsPlugin(),
+    dotEnvPlugin
+  ],
+  node: {
+    fs: 'empty'
+  }
 };

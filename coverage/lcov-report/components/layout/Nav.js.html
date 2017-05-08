@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">73.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>12/16</span>
+        <span class='fraction'>11/15</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">62.5% </span>
+        <span class="strong">43.75% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>10/16</span>
+        <span class='fraction'>7/16</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
@@ -35,9 +35,9 @@
         <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">73.33% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>12/16</span>
+        <span class='fraction'>11/15</span>
       </div>
     </div>
   </div>
@@ -112,17 +112,7 @@
 67
 68
 69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+70</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,12 +139,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -195,14 +179,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
-import PropTypes from 'prop-types';
+ 
 import { IndexLink, Link, browserHistory } from "react-router";
 import Cookies from 'js-cookie';
 import createHistory from 'history/createBrowserHistory';
@@ -227,12 +207,6 @@ export default class Nav extends React.Component {
     const collapsed = <span class="cstat-no" title="statement not covered" >!this.state.collapsed;</span>
 <span class="cstat-no" title="statement not covered" >    this.setState({collapsed});</span>
   }
-  // componentWillMount(){
-    // if(this.state.user === undefined){
-    //   history.push('/login')
-    // }
-  // }
-&nbsp;
 <span class="fstat-no" title="function not covered" >  lo</span>gout(){
 <span class="cstat-no" title="statement not covered" >    logout();</span>
 <span class="cstat-no" title="statement not covered" >    browserHistory.push('/login');</span>
@@ -241,9 +215,9 @@ export default class Nav extends React.Component {
   render() {
     const { location } = this.props;
     const { collapsed, user } = this.state;
-    const welcomeClass = location &amp;&amp; location.pathname === "/" ? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
-    const loginClass = location &amp;&amp; location.pathname &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/login/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
-    const articlesClass = location &amp;&amp; location.pathname &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/articles/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
+    const welcomeClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname === "/" </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
+    const loginClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/login/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
+    const articlesClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/articles/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
 &nbsp;
     const navClass = collapsed ? "collapse" : <span class="branch-1 cbranch-no" title="branch not covered" >"";</span>
     
@@ -251,6 +225,7 @@ export default class Nav extends React.Component {
       &lt;nav className="navbar navbar-inverse navbar-fixed-top" role="navigation"&gt;
         &lt;div className="container"&gt;
           &lt;div className="navbar-header"&gt;
+             &lt;a class="navbar-brand"&gt;Headlines&lt;/a&gt;
             &lt;button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)} &gt;
               &lt;span className="sr-only"&gt;Toggle navigation&lt;/span&gt;
               &lt;span className="icon-bar"&gt;&lt;/span&gt;
@@ -259,14 +234,12 @@ export default class Nav extends React.Component {
             &lt;/button&gt;
           &lt;/div&gt;
           &lt;div className={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1"&gt;
-           
-            &lt;ul className="nav navbar-nav"&gt;
-              &lt;li className={loginClass}&gt;
-                &lt;li className= "btn btn-info" onClick={this.logout}&gt;Logout&lt;/li&gt;
-              &lt;/li&gt;
-        
+            &lt;ul className="nav navbar-nav  pull-right"&gt;
               &lt;li className={welcomeClass}&gt;
                 &lt;IndexLink to="/" onClick={this.toggleCollapse.bind(this)}&gt;Welcome&lt;/IndexLink&gt;
+              &lt;/li&gt;
+              &lt;li className={loginClass}&gt;
+                &lt;Link to="/login" onClick={this.logout}&gt;Logout&lt;/Link&gt;
               &lt;/li&gt;
             &lt;/ul&gt;
           &lt;/div&gt;
@@ -277,16 +250,13 @@ export default class Nav extends React.Component {
   }
 }
 &nbsp;
-Nav.defaultProps = {
-  location: "/"
-}
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri May 05 2017 15:31:09 GMT+0100 (WAT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 08 2017 16:01:22 GMT+0100 (WAT)
 </div>
 </div>
 <script src="../../prettify.js"></script>

@@ -6,7 +6,6 @@ import Articles from "./pages/Articles";
 import Welcome from "./pages/Welcome";
 import Layout from "./pages/Layout";
 import Login from "./pages/Login";
-// import Logout from "./pages/Logout";
 import Cookies from 'js-cookie';
 
 const app = document.getElementById('app');

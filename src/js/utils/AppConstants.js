@@ -5,9 +5,6 @@ export const Actions ={
   SORT_ARTICLES: 'SORT_ARTICLES',
   LOGIN: 'LOGIN',
   LOGOUT: 'LOGOUT'
-    // SELECT_SEARCH_AGAIN: 'SELECT_SEARCH_AGAIN',
-    // RECEIVE_SEARCH_QUERY:'RECEIVE_SEARCH_QUERY',
-    // SEARCH_QUERY:'SEARCH_QUERY'
 };
 
 export const ViewFilters = {

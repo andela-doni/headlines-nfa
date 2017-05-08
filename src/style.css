@@ -5,17 +5,17 @@
  */
 
 /* Links */
-a,
+/*a,
 a:focus,
 a:hover {
   color: #fff;
-}
+}*/
 
 /* Custom default button */
 .btn-default,
-.btn-default:hover,
+/*.btn-default:hover,*/
 .btn-default:focus {
-  color: #333;
+  color: white;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: 1px solid #fff;
@@ -29,12 +29,10 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
 body {
-  color: #fff;
+  /*color: #fff;*/
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -84,18 +82,18 @@ body {
   color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;
 }
-.masthead-nav > li > a:hover,
+/*.masthead-nav > li > a:hover,*/
 .masthead-nav > li > a:focus {
   background-color: transparent;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
 }
-.masthead-nav > .active > a,
+/*.masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
-}
+}*/
 
 @media (min-width: 768px) {
   .masthead-brand {
@@ -162,4 +160,14 @@ body {
   .cover-container {
     width: 700px;
   }
+}
+.source{
+  min-height: 205px;
+}
+h5 {
+    padding-top: 20px;
+    color: darkslateblue;
+}
+input, button, select, textarea {
+    color: darkslateblue;
 }

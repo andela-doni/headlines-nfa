@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+ 
 import { IndexLink, Link, browserHistory } from "react-router";
 import Cookies from 'js-cookie';
 import createHistory from 'history/createBrowserHistory';
@@ -24,12 +24,6 @@ export default class Nav extends React.Component {
     const collapsed = !this.state.collapsed;
     this.setState({collapsed});
   }
-  // componentWillMount(){
-    // if(this.state.user === undefined){
-    //   history.push('/login')
-    // }
-  // }
-
   logout(){
     logout();
     browserHistory.push('/login');

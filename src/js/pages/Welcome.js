@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+ 
 import SourceStore from '../stores/SourceStore';
 import { getSources } from '../actions/SourcesActions';
 import Articles from './Articles'
@@ -16,11 +16,6 @@ export default class Welcome extends React.Component {
     };
     this.getSources = this.getSources.bind(this);
   }
-
-  componentWillMount() {
-    // SourceStore.on(this.getSources);
-  }
-
   componentDidMount() {
     getSources();
     SourceStore.addChangeListener(this.getSources);
@@ -34,7 +29,6 @@ export default class Welcome extends React.Component {
     this.setState({
       sources: SourceStore.getAll(),
     });
-    //console.log(SourceStore.getAll());
   }
 
   handleChange(event) {
@@ -43,8 +37,6 @@ export default class Welcome extends React.Component {
 
   render() {
     const { sources } = this.state;
-    console.log(this.state, "sources");
-
     const filteredSources = this.state.sources
       .filter(source => source.name
       .toLowerCase()
@@ -65,7 +57,8 @@ export default class Welcome extends React.Component {
         <div className="card-deck">
         <div className ="row">
           {filteredSources.map(source => {
-            return <div className="panel panel-default col-md-4" key={source.id}>
+            return <div className="col-md-4" key={source.id}>
+              <div className="panel panel-default source">
               <div className="panel-heading">
                 <p className="text-info panel-title">
                   <Link to={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>
@@ -78,6 +71,7 @@ export default class Welcome extends React.Component {
                <a type="button" class="btn-floating btn-small btn-fb">
                  <i class="fa fa-facebook"></i>
               </a>
+              </div>
               </div>
             </div>
           })}

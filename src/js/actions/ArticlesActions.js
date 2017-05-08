@@ -1,6 +1,8 @@
 import request from 'superagent';
 import { Actions } from '../utils/AppConstants';
 import AppDispatcher from '../utils/AppDispatcher';
+
+const apiKey = process.env.APIKEY;
 /**
  * Api call for sources.
  * @param {source}  sorts by sources.
@@ -9,7 +11,7 @@ import AppDispatcher from '../utils/AppDispatcher';
  * @returns {console.error} if the api call is not available.
  */
 const url = 'https://newsapi.org/v1/articles';
-const API = '213327409d384371851777e7c7f78dfe';
+const API = process.env.APIKEY;
 
 export const articlesCallback = (err, response) => {
   if (err) return console.error(err);

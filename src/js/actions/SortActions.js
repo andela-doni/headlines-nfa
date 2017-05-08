@@ -17,6 +17,11 @@ export const sortsCallback = (err, response) => {
     response: result,
   });
 }
+/**
+ * Api call for sorts.
+ * Dispatches SORT_ARTICLES actions
+ * @returns {console.error} if the api call is not available.
+ */
 export function getSorts(sortBy) {
   request.get(url)
     .set('api', API)
