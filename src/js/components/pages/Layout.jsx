@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router";
 import Cookies from 'js-cookie';
-import Footer from "../layout/Footer";
-import Nav from "../layout/Nav";
+import Footer from "../layout/Footer.jsx";
+import Nav from "../layout/Nav.jsx";
 import createHistory from 'history/createBrowserHistory';
 import AuthenticationStore from '../../stores/AuthenticationStore';
 import { isLoggin } from '../../actions/AuthenticationAction';
-import Login from './Login';
+import Login from './Login.jsx';
 const isLoggedIn = Cookies.get('debprojdb');
 const history = createHistory({
   forceRefresh: true

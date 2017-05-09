@@ -4,12 +4,6 @@
  * Globals
  */
 
-/* Links */
-/*a,
-a:focus,
-a:hover {
-  color: #fff;
-}*/
 
 /* Custom default button */
 .btn-default,
@@ -189,7 +183,7 @@ img.card-img-top.img-responsive.col-md-4 {
 }
 .classLogin {
   background: #044A8F;
-  width: 150px;
+  width: 200px;
   height: 40px;
   color: white;
 }

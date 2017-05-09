@@ -2,7 +2,7 @@ import React from "react";
  
 import SourceStore from '../../stores/SourceStore';
 import { getSources } from '../../actions/SourcesActions';
-import Articles from './Articles'
+import Articles from './Articles.jsx'
 import { Link } from "react-router";
 
 import { getArticles } from '../../actions/ArticlesActions';
