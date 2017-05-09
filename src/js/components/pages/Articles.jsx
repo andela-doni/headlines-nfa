@@ -1,6 +1,5 @@
 import React from 'react';
 import Icon  from 'react-share-icons';
-import Instagram from 'react-share-icons/lib/Instagram';
 import ArticlesStore from '../../stores/ArticlesStore';
 import { getArticles } from '../../actions/ArticlesActions';
 import { getSources } from '../../actions/SourcesActions';
