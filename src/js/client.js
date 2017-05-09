@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute, browserHistory } from "react-router";
 
 import Articles from "./pages/Articles";
-import Welcome from "./pages/Welcome";
+import NewsSources from "./pages/NewsSources";
 import Layout from "./pages/Layout";
 import Login from "./pages/Login";
 import Cookies from 'js-cookie';
@@ -22,7 +22,7 @@ ReactDOM.render(
     <Route>
       <Route path="/login" name="login" component={Login} />
       <Route path="/" component={Layout}>
-        <IndexRoute component={Welcome} onEnter={onEnter}/>
+        <IndexRoute component={NewsSources} onEnter={onEnter}/>
         <Route path="/sources/:article" name="articles" component={Articles} onEnter={onEnter}/>
         <Route path="*" component={() => <h1>404</h1>}/>
       </Route>

@@ -7,7 +7,7 @@ import { Link } from "react-router";
 
 import { getArticles } from '../actions/ArticlesActions';
 
-export default class Welcome extends React.Component {
+export default class NewsSources extends React.Component {
   constructor() {
     super();
     this.state = {

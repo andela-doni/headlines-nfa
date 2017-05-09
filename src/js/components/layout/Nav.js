@@ -32,7 +32,7 @@ export default class Nav extends React.Component {
   render() {
     const { location } = this.props;
     const { collapsed, user } = this.state;
-    const welcomeClass = location && location.pathname === "/" ? "active" : "";
+    const newsClass = location && location.pathname === "/" ? "active" : "";
     const loginClass = location && location.pathname && location.pathname.match(/^\/login/) ? "active" : "";
     const articlesClass = location && location.pathname && location.pathname.match(/^\/articles/) ? "active" : "";
 
@@ -52,8 +52,8 @@ export default class Nav extends React.Component {
           </div>
           <div className={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav  pull-right">
-              <li className={welcomeClass}>
-                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Welcome</IndexLink>
+              <li className={newsClass}>
+                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Sources</IndexLink>
               </li>
               <li className={loginClass}>
                 <Link to="/login" onClick={this.logout}>Logout</Link>

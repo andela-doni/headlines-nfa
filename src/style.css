@@ -184,3 +184,6 @@ img.card-img-top.img-responsive.col-md-4 {
     padding-top:10px;
     padding-bottom: 30px;
 }
+.first-letter {
+    text-transform:capitalize;
+}

@@ -7,7 +7,7 @@ import Layout from '../src/js/pages/Layout';
 
  const wrapper = shallow(<Layout />);
 
-describe('Welcome Component with news sources',() => {
+describe('NewsSources Component with news sources',() => {
     
     it('it should render div elements', () => {
         expect(wrapper.find('div')).toExist
