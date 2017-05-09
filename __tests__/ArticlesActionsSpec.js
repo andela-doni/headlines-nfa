@@ -6,6 +6,7 @@ import { getArticles, articlesCallback } from '../src/js/actions/ArticlesActions
 import AppDispatcher from '../src/js/utils/AppDispatcher';
 import { Actions } from '../src/js/utils/AppConstants.js';
 import request from 'superagent';
+const API = process.env.APIKEY;
 
 describe('getArticles()', () => {
   let articlesCallback;

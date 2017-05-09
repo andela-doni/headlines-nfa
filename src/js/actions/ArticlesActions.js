@@ -3,7 +3,6 @@ import { Actions } from '../utils/AppConstants';
 import AppDispatcher from '../utils/AppDispatcher';
 // const APIKEY='213327409d384371851777e7c7f78dfe';
 // const apiKey = process.env.APIKEY;
-const apiKey = APIKEY
 /**
  * Api call for sources.
  * @param {source}  sorts by sources.
