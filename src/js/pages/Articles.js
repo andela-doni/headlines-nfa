@@ -39,12 +39,15 @@ export default class Articles extends React.Component {
       && this.props.location.query.sort
     sorts = sorts && sorts.split(',');
     const articles = this.state.articles;
+    let props = this.props 
+      && this.props.params 
+      && this.props.params.article
     return (
        <div >
         <div >
           <br/>
           <h5 className="text-left">Sort by:</h5>
-          <h3 className="first-letter"><i>{this.props.params.article}</i></h3>
+          <h3 className="first-letter"><i>{props}</i></h3>
           <select id="select pull-left" onChange={this.handleChange.bind(this)}>
             {sorts && sorts.map(function (type, index) {
               return <option value={type} key={type}>{type}</option>;
