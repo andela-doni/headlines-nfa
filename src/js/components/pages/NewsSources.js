@@ -1,11 +1,11 @@
 import React from "react";
  
-import SourceStore from '../stores/SourceStore';
-import { getSources } from '../actions/SourcesActions';
+import SourceStore from '../../stores/SourceStore';
+import { getSources } from '../../actions/SourcesActions';
 import Articles from './Articles'
 import { Link } from "react-router";
 
-import { getArticles } from '../actions/ArticlesActions';
+import { getArticles } from '../../actions/ArticlesActions';
 
 export default class NewsSources extends React.Component {
   constructor() {

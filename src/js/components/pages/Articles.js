@@ -1,11 +1,11 @@
 import React from 'react';
 import Icon  from 'react-share-icons';
 import Instagram from 'react-share-icons/lib/Instagram';
-import ArticlesStore from '../stores/ArticlesStore';
-import { getArticles } from '../actions/ArticlesActions';
-import { getSources } from '../actions/SourcesActions';
-import { getSorts } from '../actions/SortActions';
-import SortStore from '../stores/SortStore';
+import ArticlesStore from '../../stores/ArticlesStore';
+import { getArticles } from '../../actions/ArticlesActions';
+import { getSources } from '../../actions/SourcesActions';
+import { getSorts } from '../../actions/SortActions';
+import SortStore from '../../stores/SortStore';
 
 export default class Articles extends React.Component {
   constructor() {
@@ -42,6 +42,7 @@ export default class Articles extends React.Component {
     let props = this.props 
       && this.props.params 
       && this.props.params.article
+    let i=0;
     return (
        <div >
         <div >
@@ -60,7 +61,7 @@ export default class Articles extends React.Component {
         <div className="card-columns border-top-10">
           {articles && articles.map((article, index) => {
             return (
-            <div className ="card-deck" key={article.description}>
+            <div className ="card-deck" key={i++}>
             <div className= "row">
               <img className="card-img-top img-responsive col-md-4" src= {article.urlToImage} alt={article.title}></img>
               <div className="card-block col-md-8 border-raduis">

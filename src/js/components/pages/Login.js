@@ -3,8 +3,8 @@ import React from 'react';
 import GoogleLogin from 'react-google-login';
 import Cookies from 'js-cookie';
 import { browserHistory } from "react-router";
-import AuthenticationStore from '../stores/AuthenticationStore';
-import { isLoggin } from '../actions/AuthenticationAction';
+import AuthenticationStore from '../../stores/AuthenticationStore';
+import { isLoggin } from '../../actions/AuthenticationAction';
 
 
 //fetches user info and stores it in a cookie called debprojdb

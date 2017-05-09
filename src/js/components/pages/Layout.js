@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router";
 import Cookies from 'js-cookie';
-import Footer from "../components/layout/Footer";
-import Nav from "../components/layout/Nav";
+import Footer from "../layout/Footer";
+import Nav from "../layout/Nav";
 import createHistory from 'history/createBrowserHistory';
-import AuthenticationStore from '../stores/AuthenticationStore';
-import { isLoggin } from '../actions/AuthenticationAction';
+import AuthenticationStore from '../../stores/AuthenticationStore';
+import { isLoggin } from '../../actions/AuthenticationAction';
 import Login from './Login';
 const isLoggedIn = Cookies.get('debprojdb');
 const history = createHistory({

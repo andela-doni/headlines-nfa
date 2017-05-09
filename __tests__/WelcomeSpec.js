@@ -3,7 +3,7 @@ import React from 'react';
 import expect from 'expect';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
-import NewsSources from '../src/js/pages/NewsSources';
+import NewsSources from '../src/js/components/pages/NewsSources';
 
 
 describe('News Component with news sources',() => {

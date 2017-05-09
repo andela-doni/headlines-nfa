@@ -3,7 +3,7 @@ import React from 'react';
 import expect from 'expect';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
-import Layout from '../src/js/pages/Layout';
+import Layout from '../src/js/components/pages/Layout';
 
  const wrapper = shallow(<Layout />);
 

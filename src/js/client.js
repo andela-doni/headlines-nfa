@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Router, Route, IndexRoute, browserHistory } from "react-router";
 
-import Articles from "./pages/Articles";
-import NewsSources from "./pages/NewsSources";
-import Layout from "./pages/Layout";
-import Login from "./pages/Login";
+import Articles from "./components/pages/Articles";
+import NewsSources from "./components/pages/NewsSources";
+import Layout from "./components/pages/Layout";
+import Login from "./components/pages/Login";
 import Cookies from 'js-cookie';
 
 const app = document.getElementById('app');
