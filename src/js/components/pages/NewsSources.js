@@ -16,6 +16,7 @@ export default class NewsSources extends React.Component {
     };
     this.getSources = this.getSources.bind(this);
   }
+  //Mounts the api after the articles have been mounted
   componentDidMount() {
     getSources();
     SourceStore.addChangeListener(this.getSources);
@@ -45,7 +46,7 @@ export default class NewsSources extends React.Component {
     return (
       <div>
         <br/> <br/>
-      <h3>News from over 70 sources
+      <h3 className="main-header">News from over 70 sources
       </h3>
         <div>
         <input className="searchbox col col-lg-12" 
@@ -60,7 +61,7 @@ export default class NewsSources extends React.Component {
             return <div className="col-md-4" key={source.id}>
               <div className="panel panel-default source">
               <div className="panel-heading">
-                <p className="text-info panel-title">
+                <p className="text-info panel-title main-header">
                   <Link to={`/sources/${source.id}?sort=${source.sortBysAvailable}`}>
                   {source.name}
                   </Link>

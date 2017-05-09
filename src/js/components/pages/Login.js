@@ -20,7 +20,6 @@ export const responseGoogle = (response) => {
   browserHistory.push('/');
 };
 
-
 const Login = () => (
     <div >
       <nav className="navbar navbar-inverse navbar-fixed-top">
@@ -35,16 +34,15 @@ const Login = () => (
       <div className="container">
         <div className="inner cover row">
           <div className="col-md-6 col-md-offset-3">
-            <h1>____________________________</h1>
-            <br />
-            <br />
-            <br />
-            <p className="lead">
+            <h1 className="main-header spacing">Headlines</h1>
+            <p className="lead main-header">
               Welcome to Headlines! This is a Newsfeed Application that helps you aggregate news 
-              articles from over 70 different sources. Login below to view.
+              articles from over 70 different sources.
             </p>
+            <p className="lead main-header" > Login below to view.</p>
             <div className="col-md-6 col-md-offset-3">
               <GoogleLogin
+                className="classLogin"
                 clientId="428253049382-tec2fhihi9gj19m8ugqdfp24uj105mum.apps.googleusercontent.com"
                 buttonText="Login"
                 onSuccess={responseGoogle}

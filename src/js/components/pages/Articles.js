@@ -16,6 +16,7 @@ export default class Articles extends React.Component {
     };
     this.getArticles = this.getArticles.bind(this);
   }
+  //Mounts the api after the articles have been mounted
   componentDidMount() {
     if (!this.props.params) return;
     if(this.mounted == true) return;
@@ -48,7 +49,7 @@ export default class Articles extends React.Component {
         <div >
           <br/>
           <h5 className="text-left">Sort by:</h5>
-          <h3 className="first-letter"><i>{props}</i></h3>
+          <h3 className="first-letter main-header">{props}</h3>
           <select id="select pull-left" onChange={this.handleChange.bind(this)}>
             {sorts && sorts.map(function (type, index) {
               return <option value={type} key={type}>{type}</option>;
@@ -65,7 +66,7 @@ export default class Articles extends React.Component {
             <div className= "row">
               <img className="card-img-top img-responsive col-md-4" src= {article.urlToImage} alt={article.title}></img>
               <div className="card-block col-md-8 border-raduis">
-              <h4 className="card-title"><i>{article.title}</i></h4>
+              <h4 className="card-title main-header">{article.title}</h4>
               <p className="card-text">{article.description}</p> 
               <a href={article.url} target="_blank" className="btn btn-success">More ...</a>       
               </div>   

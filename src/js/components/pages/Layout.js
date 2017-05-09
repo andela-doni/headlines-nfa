@@ -18,7 +18,7 @@ export default class Layout extends React.Component {
     this.state = this.userState();
     
   }
-
+//Mounts the api after the articles have been mounted
   componentDidMount() {
     AuthenticationStore.addChangeListener(this.login);
   }

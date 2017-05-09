@@ -185,5 +185,17 @@ img.card-img-top.img-responsive.col-md-4 {
     padding-bottom: 30px;
 }
 .first-letter {
-    text-transform:capitalize;
+  text-transform:capitalize;
+}
+.classLogin {
+  background: #044A8F;
+  width: 150px;
+  height: 40px;
+  color: white;
+}
+.main-header {
+  font-family: fantasy;
+}
+.spacing {
+  padding-top:150px;
 }
