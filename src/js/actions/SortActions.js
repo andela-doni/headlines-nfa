@@ -16,7 +16,7 @@ export const sortsCallback = (err, response) => {
     type: Actions.SORT_ARTICLES,
     response: result,
   });
-}
+};
 /**
  * Api call for sorts.
  * Dispatches SORT_ARTICLES actions

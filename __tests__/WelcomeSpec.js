@@ -3,11 +3,11 @@ import React from 'react';
 import expect from 'expect';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
-import Welcome from '../src/js/pages/Welcome';
+import NewsSources from '../src/js/components/pages/NewsSources';
 
 
-describe('Welcome Component with news sources',() => {
-     const wrapper = shallow(<Welcome />);
+describe('News Component with news sources',() => {
+     const wrapper = shallow(<NewsSources />);
     it('it should render div elements', () => {
         expect(wrapper.find('div')).toExist
     })
@@ -24,16 +24,16 @@ describe('Welcome Component with news sources',() => {
 });
 
 
-const wrapper = mount(<Welcome />);
-sinon.spy(Welcome.prototype, 'componentDidMount');
+const wrapper = mount(<NewsSources />);
+sinon.spy(NewsSources.prototype, 'componentDidMount');
 
 describe('if component mounted function exists',() => {
   it(' componentDidMount exists', () => {
-    expect(Welcome.prototype.componentDidMount.calledOnce).toExist;  
+    expect(NewsSources.prototype.componentDidMount.calledOnce).toExist;  
   });
 
   it(' componentWillUnMount exists', () => {
-    expect(Welcome.prototype.componentWillUnMount.calledOnce).toExist;  
+    expect(NewsSources.prototype.componentWillUnMount.calledOnce).toExist;  
   });
 
 

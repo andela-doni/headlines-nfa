@@ -3,7 +3,7 @@ import React from 'react';
 import expect from 'expect';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
-import Articles from '../src/js/pages/Articles';
+import Articles from '../src/js/components/pages/Articles';
 
 describe('Articles Component', () => {
     const wrapper = mount(<Articles />);

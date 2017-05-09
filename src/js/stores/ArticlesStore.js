@@ -1,34 +1,57 @@
 import { EventEmitter } from 'events';
-import assign from 'object-assign';
 import AppDispatcher from '../utils/AppDispatcher';
 import { Actions } from '../utils/AppConstants';
-
-const CHANGE_EVENT = 'change';
-
-export const ArticlesStore = assign({}, EventEmitter.prototype, {
-  // Initializing articles, sources and sortby
-  articles: [],
-  source: '',
-  sortBy: '',
-
-  // Accessor method we'll use later
+/**
+   * Articles store class
+   * @class ArticlesStore
+   * @extends EventEmitter
+   */
+class ArticleStore extends EventEmitter {
+  /**
+   * Source store class
+   * @class ArticlesStore
+   * @extends EventEmitter
+   */
+  constructor() {
+    super();
+    this.articles = [];
+    this.source = '';
+    this.sortBy = '';
+  }
+  /**
+   * @returns {articles} returns all the sources
+   * @memberOf SourceStore
+   */
   getAll() {
     return this.articles;
-  },
-
-  emitChange() {
-    this.emit(CHANGE_EVENT);
-  },
-
-
-  addChangeListener(callback) {
-    this.on(CHANGE_EVENT, callback);
-  },
-  removeChangeListener(callback) {
-    this.removeListener(CHANGE_EVENT, callback);
   }
-});
-
+  /**
+   * @returns {change} returns all the sources
+   * @memberOf SourceStore
+   */
+  emitChange() {
+    this.emit('change');
+  }
+  /**
+   * change listener
+   * @params {callback} function implemented
+   * @returns {callback } returns all the sources
+   * @memberOf SourceStore
+   */
+  addChangeListener(callback) {
+    this.on('change', callback);
+  }
+  /**
+   * remove change listener
+   * @params {callback} function implemented
+   * @returns {callback } returns all the sources
+   * @memberOf ArticlesStore
+   */
+  removeChangeListener(callback) {
+    this.removeListener('change', callback);
+  }
+}
+const ArticlesStore = new ArticleStore();
 AppDispatcher.register((payload) => {
   switch (payload.type) {
     case Actions.GET_ARTICLES:
@@ -37,6 +60,8 @@ AppDispatcher.register((payload) => {
       ArticlesStore.source = payload.response.source;
       ArticlesStore.sortBy = payload.response.sortBy;
       ArticlesStore.emitChange();
+      break;
+    default:
       break;
   }
 });

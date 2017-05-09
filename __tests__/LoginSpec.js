@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import expect from 'expect';
 import GoogleLogin from 'react-google-login';
-import Login, { responseGoogle } from '../src/js/pages/Login';
+import Login, { responseGoogle } from '../src/js/components/pages/Login';
 import Cookies from 'js-cookie';
 import { browserHistory } from 'react-router';
 import sinon from 'sinon';
