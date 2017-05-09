@@ -1,7 +1,7 @@
 import request from 'superagent';
 import { Actions } from '../utils/AppConstants';
 import AppDispatcher from '../utils/AppDispatcher';
-const APIKEY='213327409d384371851777e7c7f78dfe';
+// const APIKEY='213327409d384371851777e7c7f78dfe';
 // const apiKey = process.env.APIKEY;
 const apiKey = APIKEY
 /**

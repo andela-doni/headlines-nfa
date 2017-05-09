@@ -9,7 +9,7 @@ import sinon from 'sinon';
 
 jest.mock('../src/js/utils/AppDispatcher');
 jest.dontMock('../src/js/stores/SortStore');
-jest.dontMock('object-assign');
+//jest.dontMock('object-assign');
 
 describe('SortStore',() => {
   const action = {
