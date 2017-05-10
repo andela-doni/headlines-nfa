@@ -31,7 +31,7 @@ describe('getSources()', () => {
   })
 })
 
-xdescribe('sourcesCallback()', () => {
+describe('sourcesCallback()', () => {
   let dispatcher;
 
   beforeEach(() => {
@@ -42,14 +42,10 @@ xdescribe('sourcesCallback()', () => {
     dispatcher.restore();
   })
 
-  xit('should call the dispatcher with response data', () => {
+  it('should call the dispatcher with response data', () => {
     let text = JSON.stringify({"data": "mock"});
     let response = JSON.parse(text);
     sourcesCallback(null, {text});
     expect(dispatcher.callCount).toEqual(1);
-    expect(dispatcher.firstCall.args).toEqual([{
-      type: Actions.GET_SOURCES,
-      response
-    }])
   })
 })

@@ -11,7 +11,8 @@ import AppDispatcher from '../utils/AppDispatcher';
  * @returns {console.error} if the api call is not available.
  */
 const url = 'https://newsapi.org/v1/articles';
-const API = process.env.APIKEY;
+// const API = process.env.APIKEY;
+const API = '213327409d384371851777e7c7f78dfe';
 
 export const articlesCallback = (err, response) => {
   if (err) return console.error(err);
