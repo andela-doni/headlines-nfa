@@ -1,12 +1,11 @@
-import React from 'react';
+import request from 'superagent';
 import expect from 'expect';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
 import { getArticles, articlesCallback } from '../src/js/actions/ArticlesActions';
-import AppDispatcher from '../src/js/utils/AppDispatcher';
 import { Actions } from '../src/js/utils/AppConstants.js';
-import request from 'superagent';
-const API = process.env.APIKEY;
+import AppDispatcher from '../src/js/utils/AppDispatcher';
+
 
 describe('getArticles()', () => {
   let articlesCallback;
