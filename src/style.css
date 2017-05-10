@@ -193,3 +193,11 @@ img.card-img-top.img-responsive.col-md-4 {
 .spacing {
   padding-top:150px;
 }
+.navPadding {
+  padding-top: 30px;
+  color: white;
+}
+.navPad{
+  padding-top: 10px;
+  color: white;
+}

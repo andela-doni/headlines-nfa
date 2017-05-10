@@ -49,14 +49,17 @@ describe('responseGoogle()', () => {
     profileObj: {
       name: 'John',
       email: 'john@gmail.com',
-      imageUrl: 'john_pic_url'
+      imageUrl: 'john_pic_url',
     }
+  }
+  let expires ={
+    expires :0.125
   }
 
   const expectedUserDetails = {
     name: response.profileObj.name,
     email: response.profileObj.email,
-    image: response.profileObj.imageUrl
+    image: response.profileObj.imageUrl,
   }
 
   beforeEach(() => {
@@ -76,7 +79,7 @@ describe('responseGoogle()', () => {
       responseGoogle(response);
       expect(cookie.callCount).toEqual(1)
       expect(cookie.firstCall.args).toEqual(['debprojdb', 
-                                            expectedUserDetails]);
+                                            expectedUserDetails,expires]);
     });
   });
 
