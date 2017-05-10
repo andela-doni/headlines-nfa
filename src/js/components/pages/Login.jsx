@@ -15,7 +15,7 @@ export const responseGoogle = (response) => {
     email,
     image: imageUrl
   };
-  Cookies.set('debprojdb', user_details);
+  Cookies.set('debprojdb', user_details,{ expires: 0.125 });
   isLoggin();
   browserHistory.push('/');
 };
