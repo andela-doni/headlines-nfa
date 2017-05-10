@@ -63,7 +63,7 @@ export default class Articles extends React.Component {
             return (
             <div className ="card-deck" key={i++}>
             <div className= "row">
-              <img className="card-img-top img-responsive col-md-4" src= {article.urlToImage} alt={article.title}></img>
+              <img className="card-img-top img-responsive col-md-4" src={article.urlToImage} alt={article.title}></img>
               <div className="card-block col-md-8 border-raduis">
               <h4 className="card-title main-header">{article.title}</h4>
               <p className="card-text">{article.description}</p> 
