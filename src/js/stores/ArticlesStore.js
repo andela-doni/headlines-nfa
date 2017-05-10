@@ -34,8 +34,8 @@ class ArticleStore extends EventEmitter {
   }
   /**
    * change listener
-   * @params {callback} function implemented
-   * @returns {callback } returns all the sources
+   * @params callback function implemented
+   * @returns {function} returns all the sources
    * @memberOf SourceStore
    */
   addChangeListener(callback) {

@@ -42,8 +42,8 @@ export default class Nav extends React.Component {
       <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div className="container">
           <div className="navbar-header">
-             <a class="navbar-brand main-header navPadding">
-                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)} className="navPadding">Headlines</IndexLink></a>
+            <h4 className="navPadding main-header">  <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>
+            Headlines</IndexLink></h4>
             <button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>

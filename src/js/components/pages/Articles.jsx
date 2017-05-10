@@ -42,7 +42,7 @@ export default class Articles extends React.Component {
     let props = this.props 
       && this.props.params 
       && this.props.params.article
-    let i=0;
+    // let i=0;
     return (
        <div >
         <div >
@@ -61,7 +61,7 @@ export default class Articles extends React.Component {
         <div className="card-columns border-top-10">
           {articles && articles.map((article, index) => {
             return (
-            <div className ="card-deck" key={i++}>
+            <div className ="card-deck" key={article.urlToImage}>
             <div className= "row">
               <img className="card-img-top img-responsive col-md-4" src= {article.urlToImage} alt={article.title}></img>
               <div className="card-block col-md-8 border-raduis">
