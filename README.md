@@ -3,7 +3,7 @@
 [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
 
 # HEADLINES
-Headlines is a new app that displays published articles and sources from well-known and reliable sources. It fetches this data by consming an api called NewsApi that returns JSON metadata for published articles on a range of news sources and blogs. This application is similar to a mordern RSS feed.
+Headlines is a new app that displays published articles and sources from well-known and reliable sources. It fetches this data by consuming an api called NewsApi that returns JSON metadata for published articles on a range of news sources and blogs. This application is similar to a mordern RSS feed.
 
 ## Table of Contents
 1. Getting Started
