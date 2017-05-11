@@ -10,6 +10,7 @@ Headlines is a new app that displays published articles and sources from well-kn
 2. Prerequisites
 3. Running Tests
 4. Deployment.
+5. Technologies
 
 ## Getting Started
 1. Clone the repo to your local machine
