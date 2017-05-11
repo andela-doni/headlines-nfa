@@ -1,7 +1,9 @@
+.env
 # Logs
 logs
 *.log
 npm-debug.log*
+
 
 # Runtime data
 pids
@@ -26,5 +28,5 @@ build/Release
 node_modules
 jspm_packages
 coverage
-.env
+
 .DS_Store
