@@ -4,7 +4,7 @@ import expect from 'expect';
 import sinon from 'sinon';
 import { shallow, mount } from 'enzyme';
 import NewsSources from '../src/js/components/pages/NewsSources';
-import SourcesStore from '../src/js/stores/SourceStore';
+import SourcesStore,{removeChangeListener} from '../src/js/stores/SourceStore';
 
 
 describe('News Component with news sources',() => {
@@ -32,6 +32,7 @@ sinon.spy(NewsSources.prototype, 'handleChange');
 sinon.spy(NewsSources.prototype, 'setState');
 sinon.spy(NewsSources.prototype, 'getSources');
 
+
 describe('if component mounted function exists',() => {
   it(' componentDidMount exists', () => {
     expect(NewsSources.prototype.componentDidMount.calledOnce).toExist;  
@@ -41,13 +42,16 @@ describe('if component mounted function exists',() => {
     expect(NewsSources.prototype.componentWillUnMount.calledOnce).toExist;  
   });
   it('change event handlers exists', () => {
-    expect(NewsSources.prototype.handleChange.calledOnce).toExist;  
+    expect(NewsSources.prototype.handleChange).toExist;  
   });
   it('change event handlers exists', () => {
     expect(NewsSources.prototype.handleChange).toHaveBeenCalled;  
   });
   it('contains setState', () => {
     expect(NewsSources.prototype.setState).toHaveBeenCalled;  
+  });
+  it('contains setState', () => {
+    expect(NewsSources.prototype.getSources).toHaveBeenCalled;  
   });
   it('contains setState', () => {
     expect(NewsSources.prototype.getSources).toHaveBeenCalled;  

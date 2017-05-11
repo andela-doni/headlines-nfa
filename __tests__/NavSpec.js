@@ -17,7 +17,4 @@ describe('Navigation component with the elements available',() => {
 		it('it should contain a link to the ', () => {
       expect(wrapper.find('a')).toExist
     })
-		xit('it should contain a link to the ', () => {
-      expect(wrapper.find('IndexLink')).toEqual('/')
-    })
 })

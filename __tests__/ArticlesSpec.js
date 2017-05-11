@@ -63,5 +63,8 @@ describe('if component mounted function exists',() => {
   it('contains setState', () => {
     expect(Articles.prototype.setState).toHaveBeenCalled;  
   });
+  it('contains setState', () => {
+    expect(Articles.prototype.setState).toExist;  
+  });
 })
 
