@@ -1,5 +1,5 @@
 import React from "react";
- 
+import PropTypes from 'prop-types';
 import SourceStore from '../../stores/SourceStore';
 import { getSources } from '../../actions/SourcesActions';
 import Articles from './Articles.jsx'

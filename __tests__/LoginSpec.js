@@ -32,13 +32,6 @@ describe('Component with google login', () => {
     const loginComponent = wrapper.find('t');    
     expect(loginComponent.props().buttonText).toEqual('Login');      
   })
-
-xit('should login', () => {
-    logInButton = wrapper.find('button');
-    logInButton.simulate('click');
-    // expect(googleSpy.calledOnce).to.equal(true);
-    expect(true).toEqual(true);
-  })
 });
 
 describe('responseGoogle()', () => {
