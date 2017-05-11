@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { Link } from "react-router";
 import Cookies from 'js-cookie';
 import Footer from "../layout/Footer.jsx";
@@ -59,3 +60,4 @@ render() {
           );
   }
 }
+

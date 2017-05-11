@@ -22,10 +22,23 @@ describe('Articles Component', () => {
     it('it should render  an select element', () => {
         expect(wrapper.find('select')).toExist
     })
+    it('it should render a class with col-md-4', () => {
+        expect(wrapper.find('col-md-4')).toExist
+    })
+     it('it should render with a key of source.id ', () => {
+        expect(wrapper.find('source.id')).toExist
+    })
 });
 
 const wrapper = mount(<Articles />);
 sinon.spy(Articles.prototype, 'componentDidMount');
+sinon.spy(Articles.prototype, 'componentWillUnMount');
+sinon.spy(Articles.prototype, 'getArticles');
+sinon.spy(Articles.prototype, 'handleChange');
+sinon.spy(Articles.prototype, 'setState');
+
+
+
 
 describe('if component mounted function exists',() => {
   it(' componentDidMount exists', () => {
@@ -35,6 +48,23 @@ describe('if component mounted function exists',() => {
   it(' componentWillUnMount exists', () => {
     expect(Articles.prototype.componentWillUnMount.calledOnce).toExist;  
   });
-
-
+  it('change event handlers exists', () => {
+    expect(Articles.prototype.handleChange.calledOnce).toExist;  
+  });
+  it('change event handlers exists', () => {
+    expect(Articles.prototype.handleChange).toHaveBeenCalled;  
+  });
+  it('contains getArticles', () => {
+    expect(Articles.prototype.getArticles.calledOnce).toExist;  
+  });
+  it('contains getArticles', () => {
+    expect(Articles.prototype.getArticles).toHaveBeenCalled;  
+  });
+  it('contains setState', () => {
+    expect(Articles.prototype.setState).toHaveBeenCalled;  
+  });
+  it('contains setState', () => {
+    expect(Articles.prototype.setState).toExist;  
+  });
 })
+

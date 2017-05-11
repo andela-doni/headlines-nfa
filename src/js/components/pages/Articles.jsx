@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon  from 'react-share-icons';
 import ArticlesStore from '../../stores/ArticlesStore';
 import { getArticles } from '../../actions/ArticlesActions';

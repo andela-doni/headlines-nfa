@@ -23,9 +23,6 @@ describe('if component mounted function exists',() => {
   it(' componentDidMount exists', () => {
     expect(Layout.prototype.componentDidMount.calledOnce).toExist;  
   });
-  xit(' componentDidMount mounted', () => {
-    expect(Layout.prototype.componentDidMount).toEqual(true);  
-  });
 
   it('user state function that fetches info from the store exists', () => {
       expect(Layout.prototype.login).toExist;
