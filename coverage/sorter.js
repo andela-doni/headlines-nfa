@@ -37,7 +37,7 @@ var addSorting = (function () {
             }
         }
         return cols;
-    }
+    };
     // attaches a data attribute to every tr element with an object
     // of data values keyed by column name
     function loadRowData(tableRow) {
