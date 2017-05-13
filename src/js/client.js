@@ -7,6 +7,8 @@ import NewsSources from "./components/pages/NewsSources.jsx";
 import Layout from "./components/pages/Layout.jsx";
 import Login from "./components/pages/Login.jsx";
 import Cookies from 'js-cookie';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/pages/index.scss';
 
 const app = document.getElementById('app');
 const onEnter = (nextState, replace) => {

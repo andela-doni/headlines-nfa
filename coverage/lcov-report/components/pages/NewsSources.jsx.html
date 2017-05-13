@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">84.62% </span>
+        <span class="strong">61.54% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>11/13</span>
+        <span class='fraction'>8/13</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">75% </span>
+        <span class="strong">37.5% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>6/8</span>
+        <span class='fraction'>3/8</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">84.62% </span>
+        <span class="strong">61.54% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>11/13</span>
+        <span class='fraction'>8/13</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -159,7 +159,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -169,17 +169,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">70x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,7 +186,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">70x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -245,8 +245,8 @@ export default class NewsSources extends React.Component {
 <span class="cstat-no" title="statement not covered" >    SourceStore.removeChangeListener(this.getSources);</span>
   }
 &nbsp;
-  getSources() {
-    this.setState({
+<span class="fstat-no" title="function not covered" >  ge</span>tSources() {
+<span class="cstat-no" title="statement not covered" >    this.setState({</span>
       sources: SourceStore.getAll(),
     });
   }
@@ -258,7 +258,7 @@ export default class NewsSources extends React.Component {
   render() {
     const { sources } = this.state;
     const filteredSources = this.state.sources
-      .filter(source =&gt; source.name
+      .filter(<span class="fstat-no" title="function not covered" >so</span>urce =&gt; <span class="cstat-no" title="statement not covered" >source.name</span>
       .toLowerCase()
       .indexOf(this.state.search.toLowerCase()) !== -1);
 &nbsp;
@@ -276,8 +276,8 @@ export default class NewsSources extends React.Component {
         &lt;br/&gt;&lt;br/&gt;
         &lt;div className="card-deck"&gt;
         &lt;div className ="row"&gt;
-          {filteredSources.map(source =&gt; {
-            return &lt;div className="col-md-4" key={source.id}&gt;
+          {filteredSources.map(<span class="fstat-no" title="function not covered" >so</span>urce =&gt; {
+<span class="cstat-no" title="statement not covered" >            return &lt;div className="col-md-4" key={source.id}&gt;</span>
               &lt;div className="panel panel-default source"&gt;
               &lt;div className="panel-heading"&gt;
                 &lt;p className="text-info panel-title main-header"&gt;
@@ -310,7 +310,7 @@ export default class NewsSources extends React.Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri May 12 2017 16:08:37 GMT+0100 (WAT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat May 13 2017 14:14:12 GMT+0100 (WAT)
 </div>
 </div>
 <script src="../../prettify.js"></script>
