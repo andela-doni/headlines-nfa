@@ -32,7 +32,11 @@ class Authentication extends EventEmitter {
       isAuthenticated: false
     };
   }
-   getUser() {
+  /**
+   * Source store class
+   * @returns {this.user}
+   */
+  getUser() {
     return this.user;
   }
   /**
@@ -63,7 +67,7 @@ class Authentication extends EventEmitter {
 }
 /**
  * Initialises methods used to fetch the payload from actions.
- * @function AppDispatcher.register , registers  the action on the store, 
+ * @function AppDispatcher.register , registers  the action on the store,
  * to emit change regarding the specific action that nedds to be triggered
  * Login gets triggers the users information set in the debprodb cookie
  * Logout clears the users information in the cookie
