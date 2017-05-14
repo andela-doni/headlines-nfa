@@ -10,7 +10,7 @@ import AppDispatcher from '../utils/AppDispatcher';
  * @argument {err, response}
  */
 export const sourcesCallback = (err, response) => {
-  if (err) return console.error(err);
+  if (err) return;
   const result = JSON.parse(response.text);
   AppDispatcher.dispatch({
     type: Actions.GET_SOURCES,
