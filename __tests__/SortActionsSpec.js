@@ -1,24 +1,22 @@
-import React from 'react';
 import expect from 'expect';
 import sinon from 'sinon';
-import { shallow, mount } from 'enzyme';
+import request from 'superagent';
 import { getSorts, sortsCallback } from '../src/js/actions/SortActions';
 import AppDispatcher from '../src/js/utils/AppDispatcher';
-import { Actions } from '../src/js/utils/AppConstants.js';
-import request from 'superagent';
+import { Actions } from '../src/js/utils/AppConstants';
 
 describe('getSorts()', () => {
-  let sortsCallback;
+  let sorts;
 
   beforeEach(() => {
-    sortsCallback = sinon.spy();
-    let stubRequest = {
+    sorts = sinon.spy();
+    const stubRequest = {
        set: function() {return this},
        query: function() {return this},
        end: function(a, b) { sortsCallback(a, b) },
     };
     sinon.stub(request, 'get').returns(stubRequest);
-    sortsCallback = sinon.stub(stubRequest, 'end');
+    sorts = sinon.stub(stubRequest, 'end');
   });
 
   afterEach(() => {
@@ -27,7 +25,7 @@ describe('getSorts()', () => {
   
   it('calls the success callback', () => {
     getSorts();
-    expect(sortsCallback.callCount).toEqual(1);
+    expect(sorts.callCount).toEqual(1);
   })
 })
 

@@ -9,7 +9,9 @@
 "root": true,
   "env": {
     "node": true,
-    "es6": true
+    "es6": true,
+    "jasmine": true,
+    "jest":true
   },
   "rules": {
     "one-var": 0,

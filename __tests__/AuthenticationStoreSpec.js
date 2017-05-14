@@ -1,9 +1,7 @@
-import { EventEmitter } from 'events';
-import assign from 'object-assign';
 import AppDispatcher from '../src/js/utils/AppDispatcher';
 import { Actions } from '../src/js/utils/AppConstants';
 import AuthenticationStore from '../src/js/stores/AuthenticationStore';
-import sinon from 'sinon';
+
 
 /*eslint-disable no-unused-expressions*/
 
@@ -11,18 +9,18 @@ jest.mock('../src/js/utils/AppDispatcher');
 jest.dontMock('../src/js/stores/AuthenticationStore');
 jest.dontMock('object-assign');
 
-describe('AuthenticationStore',() => {
+describe('AuthenticationStore', () => {
   const action = {
     eventType: Actions.LOGIN,
     news: [{
-      name:'Debs',
-      email:'debs@gm.com'
-    },{
-      title:'Lol',
-      description:'lol@lmao.com'
-    }] 
+      name: 'Debs',
+      email: 'debs@gm.com'
+    }, {
+      title: 'Lol',
+      description: 'lol@lmao.com'
+    }]
   };
-let callback;
+const callback;
 
 beforeEach(() => {
   callback = AppDispatcher.register.mock.calls [0][0];

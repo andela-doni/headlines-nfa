@@ -1,51 +1,48 @@
-import React from 'react';
 import expect from 'expect';
 import sinon from 'sinon';
-import { shallow, mount } from 'enzyme';
+import request from 'superagent';
 import { getSources, sourcesCallback } from '../src/js/actions/SourcesActions';
 import AppDispatcher from '../src/js/utils/AppDispatcher';
-import { Actions } from '../src/js/utils/AppConstants.js';
-import request from 'superagent';
+// import { Actions } from '../src/js/utils/AppConstants';
 
 describe('getSources()', () => {
-  let sourcesCallback;
+  let sources;
 
   beforeEach(() => {
-    sourcesCallback = sinon.spy();
-    let stubRequest = {
-       set: function() {return this},
-       query: function() {return this},
-       end: function(a, b) { sourcesCallback(a, b) },
+    sources = sinon.spy();
+    const stubRequest = {
+      set() { return this; },
+      query() { return this; },
+      end(a, b) { sourcesCallback(a, b); }
     };
     sinon.stub(request, 'get').returns(stubRequest);
-    sourcesCallback = sinon.stub(stubRequest, 'end');
+    sources = sinon.stub(stubRequest, 'end');
   });
 
   afterEach(() => {
-    sourcesCallback.restore();
-  })
-  
+    sources.restore();
+  });
   it('calls the success callback', () => {
     getSources();
-    expect(sourcesCallback.callCount).toEqual(1);
-  })
-})
+    expect(sources.callCount).toEqual(1);
+  });
+});
 
 describe('sourcesCallback()', () => {
   let dispatcher;
 
   beforeEach(() => {
     dispatcher = sinon.spy(AppDispatcher, 'dispatch');
-  })
+  });
 
   afterEach(() => {
     dispatcher.restore();
-  })
+  });
 
   it('should call the dispatcher with response data', () => {
-    let text = JSON.stringify({"data": "mock"});
-    let response = JSON.parse(text);
-    sourcesCallback(null, {text});
+    const text = JSON.stringify({ data: 'mock' });
+    // const response = JSON.parse(text);
+    sourcesCallback(null, { text });
     expect(dispatcher.callCount).toEqual(1);
-  })
-})
+  });
+});
