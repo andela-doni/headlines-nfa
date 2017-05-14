@@ -1,7 +1,9 @@
 import AppDispatcher from '../src/js/utils/AppDispatcher';
 import { Actions } from '../src/js/utils/AppConstants';
 import ArticlesStore from '../src/js/stores/ArticlesStore';
+
 /* eslint-disable no-unused-expressions*/
+
 jest.mock('../src/js/utils/AppDispatcher');
 jest.dontMock('../src/js/stores/ArticlesStore');
 jest.dontMock('object-assign');
@@ -50,8 +52,6 @@ describe('ArticlesStore', () => {
 });
 
 describe('change listener functions', () => {
-  const onChange
-  const removeChange;
   const callback = (() => 'news');
 
   ArticlesStore.addChangeListener(callback);
