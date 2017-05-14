@@ -5,9 +5,11 @@ import Cookies from 'js-cookie';
 import { browserHistory } from "react-router";
 import AuthenticationStore from '../../stores/AuthenticationStore';
 import { isLoggin } from '../../actions/AuthenticationAction';
-
-
 //fetches user info and stores it in a cookie called debprojdb
+ /**
+   * fetches user details and stores in cookie
+   * @method responseGoogle
+   */
 export const responseGoogle = (response) => {
   const {name, email, imageUrl} = response.profileObj;
   let user_details = {
@@ -36,7 +38,8 @@ const Login = () => (
           <div className="col-md-6 col-md-offset-3">
             <h1 className="main-header spacing">Headlines</h1>
             <p className="lead main-header">
-              Welcome to Headlines! This is a Newsfeed Application that helps you aggregate news 
+              Welcome to Headlines! This is a Newsfeed 
+              Application that helps you aggregate news 
               articles from over 70 different sources.
             </p>
             <p className="lead main-header" > Login below to view.</p>
@@ -54,6 +57,4 @@ const Login = () => (
       </div>
     </div>
   );
-
-
 export default Login;

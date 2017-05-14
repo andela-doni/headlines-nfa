@@ -2,6 +2,7 @@ import request from 'superagent';
 import expect from 'expect';
 import sinon from 'sinon';
 import { getArticles, articlesCallback } from '../src/js/actions/ArticlesActions';
+import stubRequest from '../helperFiles/helperArticles';
 import { Actions } from '../src/js/utils/AppConstants';
 import AppDispatcher from '../src/js/utils/AppDispatcher';
 
@@ -11,11 +12,6 @@ describe('getArticles()', () => {
 
   beforeEach(() => {
     articles = sinon.spy();
-    const stubRequest = {
-      set() { return this; },
-      query() { return this; },
-      end(a, b) { articlesCallback(a, b); },
-    };
     sinon.stub(request, 'get').returns(stubRequest);
     articles = sinon.stub(stubRequest, 'end');
   });

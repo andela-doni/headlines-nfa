@@ -8,6 +8,10 @@ import { Link } from "react-router";
 import { getArticles } from '../../actions/ArticlesActions';
 
 export default class NewsSources extends React.Component {
+  /**
+   * constructor for NewsSources class
+   * @constructor
+   */
   constructor() {
     super();
     this.state = {
@@ -16,26 +20,45 @@ export default class NewsSources extends React.Component {
     };
     this.getSources = this.getSources.bind(this);
   }
-  //Mounts the api after the articles have been mounted
+  /**
+   * Adds event listener
+   * Mounts the api after the sources have been mounted
+   * @method componentDidMount
+   */
   componentDidMount() {
     getSources();
     SourceStore.addChangeListener(this.getSources);
   }
+  /**
+   * unmounts the sources Component
+   * Removes event listener
+   * @method componentWillUnMount
+   */
 
   componentWillUnMount() {
     SourceStore.removeChangeListener(this.getSources);
   }
+  /**
+   * fetches sources from store
+   * @method getSources
+   */
 
   getSources() {
     this.setState({
       sources: SourceStore.getAll(),
     });
   }
-
+  /**
+   * @method handleChange
+   * handles changes when an event occurs
+   */
   handleChange(event) {
     this.setState({ search: event.target.value })
   }
-
+  /**
+   * @method
+   * renders the Component
+   */
   render() {
     const { sources } = this.state;
     const filteredSources = this.state.sources

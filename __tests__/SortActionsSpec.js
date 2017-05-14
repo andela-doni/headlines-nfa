@@ -2,6 +2,7 @@ import expect from 'expect';
 import sinon from 'sinon';
 import request from 'superagent';
 import { getSorts, sortsCallback } from '../src/js/actions/SortActions';
+import stubRequest from '../helperFiles/helperSorts';
 import AppDispatcher from '../src/js/utils/AppDispatcher';
 import { Actions } from '../src/js/utils/AppConstants';
 
@@ -10,11 +11,6 @@ describe('getSorts()', () => {
 
   beforeEach(() => {
     sorts = sinon.spy();
-    const stubRequest = {
-      set() { return this; },
-      query() { return this; },
-      end(a, b) { sortsCallback(a, b); },
-    };
     sinon.stub(request, 'get').returns(stubRequest);
     sorts = sinon.stub(stubRequest, 'end');
   });

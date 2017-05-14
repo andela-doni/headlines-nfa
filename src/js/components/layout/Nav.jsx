@@ -5,12 +5,14 @@ import Cookies from 'js-cookie';
 import createHistory from 'history/createBrowserHistory';
 import {logout} from '../../actions/AuthenticationAction';
 
-
 const history = createHistory({
   forceRefresh: true
 })
 
 export default class Nav extends React.Component {
+  /**
+ * @constructor for Nav class
+ */
   constructor() {
     super()
   
@@ -20,41 +22,58 @@ export default class Nav extends React.Component {
     };
     this.logout = this.logout.bind(this);
   }
+/**
+ * @method toggleCollapse
+ */
   toggleCollapse() {
     const collapsed = !this.state.collapsed;
     this.setState({collapsed});
   }
+  /**
+ * @method logout 
+ */
   logout(){
     logout();
     browserHistory.push('/login');
   }
-
+/**
+ * @method render method for Nav Component
+ */
   render() {
     const { location } = this.props;
     const { collapsed, user } = this.state;
-    const newsClass = location && location.pathname === "/" ? "active" : "";
-    const loginClass = location && location.pathname && location.pathname.match(/^\/login/) ? "active" : "";
-    const articlesClass = location && location.pathname && location.pathname.match(/^\/articles/) ? "active" : "";
+    const newsClass = location 
+    && location.pathname === "/" ? "active" : "";
+    const loginClass = location && location.pathname 
+    && location.pathname.match(/^\/login/) ? "active" : "";
+    const articlesClass = location && location.pathname 
+    && location.pathname.match(/^\/articles/) ? "active" : "";
 
     const navClass = collapsed ? "collapse" : "";
     
     return (
-      <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <nav className="navbar navbar-inverse navbar-fixed-top" 
+        role="navigation">
         <div className="container">
           <div className="navbar-header">
-            <h4 className="navPadding main-header">  <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>
-            Headlines</IndexLink></h4>
-            <button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)} >
+            <h4 className="navPadding main-header">  
+              <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>
+                Headlines
+              </IndexLink></h4>
+            <button type="button" className="navbar-toggle" 
+            onClick={this.toggleCollapse.bind(this)} >
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
           </div>
-          <div className={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1">
+          <div className={"navbar-collapse " + navClass} 
+          id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav  pull-right navPad">
               <li className={newsClass}>
-                <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Sources</IndexLink>
+                <IndexLink to="/" 
+                onClick={this.toggleCollapse.bind(this)}>Sources</IndexLink>
               </li>
               <li className={loginClass}>
                 <Link to="/login" onClick={this.logout}>Logout</Link>

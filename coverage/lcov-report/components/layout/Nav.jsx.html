@@ -113,7 +113,16 @@
 68
 69
 70
-71</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,12 +157,21 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,29 +235,38 @@ export default class Nav extends React.Component {
   render() {
     const { location } = this.props;
     const { collapsed, user } = this.state;
-    const newsClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname === "/" </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
-    const loginClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/login/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
-    const articlesClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/articles/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
+    const newsClass = location 
+    &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname === "/" </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
+    const loginClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname </span>
+    &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/login/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
+    const articlesClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname </span>
+    &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/articles/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
 &nbsp;
     const navClass = collapsed ? "collapse" : <span class="branch-1 cbranch-no" title="branch not covered" >"";</span>
     
     return (
-      &lt;nav className="navbar navbar-inverse navbar-fixed-top" role="navigation"&gt;
+      &lt;nav className="navbar navbar-inverse navbar-fixed-top" 
+        role="navigation"&gt;
         &lt;div className="container"&gt;
           &lt;div className="navbar-header"&gt;
-            &lt;h4 className="navPadding main-header"&gt;  &lt;IndexLink to="/" onClick={this.toggleCollapse.bind(this)}&gt;
-            Headlines&lt;/IndexLink&gt;&lt;/h4&gt;
-            &lt;button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)} &gt;
+            &lt;h4 className="navPadding main-header"&gt;  
+              &lt;IndexLink to="/" onClick={this.toggleCollapse.bind(this)}&gt;
+                Headlines
+              &lt;/IndexLink&gt;&lt;/h4&gt;
+            &lt;button type="button" className="navbar-toggle" 
+            onClick={this.toggleCollapse.bind(this)} &gt;
               &lt;span className="sr-only"&gt;Toggle navigation&lt;/span&gt;
               &lt;span className="icon-bar"&gt;&lt;/span&gt;
               &lt;span className="icon-bar"&gt;&lt;/span&gt;
               &lt;span className="icon-bar"&gt;&lt;/span&gt;
             &lt;/button&gt;
           &lt;/div&gt;
-          &lt;div className={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1"&gt;
+          &lt;div className={"navbar-collapse " + navClass} 
+          id="bs-example-navbar-collapse-1"&gt;
             &lt;ul className="nav navbar-nav  pull-right navPad"&gt;
               &lt;li className={newsClass}&gt;
-                &lt;IndexLink to="/" onClick={this.toggleCollapse.bind(this)}&gt;Sources&lt;/IndexLink&gt;
+                &lt;IndexLink to="/" 
+                onClick={this.toggleCollapse.bind(this)}&gt;Sources&lt;/IndexLink&gt;
               &lt;/li&gt;
               &lt;li className={loginClass}&gt;
                 &lt;Link to="/login" onClick={this.logout}&gt;Logout&lt;/Link&gt;
@@ -259,7 +286,7 @@ export default class Nav extends React.Component {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun May 14 2017 16:56:46 GMT+0100 (WAT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun May 14 2017 17:31:09 GMT+0100 (WAT)
 </div>
 </div>
 <script src="../../prettify.js"></script>

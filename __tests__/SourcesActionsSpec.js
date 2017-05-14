@@ -2,19 +2,15 @@ import expect from 'expect';
 import sinon from 'sinon';
 import request from 'superagent';
 import { getSources, sourcesCallback } from '../src/js/actions/SourcesActions';
+import stubRequest from '../helperFiles/helperSources';
 import AppDispatcher from '../src/js/utils/AppDispatcher';
-// import { Actions } from '../src/js/utils/AppConstants';
 
 describe('getSources()', () => {
   let sources;
 
   beforeEach(() => {
     sources = sinon.spy();
-    const stubRequest = {
-      set() { return this; },
-      query() { return this; },
-      end(a, b) { sourcesCallback(a, b); }
-    };
+    
     sinon.stub(request, 'get').returns(stubRequest);
     sources = sinon.stub(stubRequest, 'end');
   });
