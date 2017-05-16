@@ -31,7 +31,7 @@ describe('SortStore', () => {
     expect(allInfo).toBe(0);
   });
 
-  test('registers tthe right payload', () => {
+  test('registers the right payload', () => {
     onSuccess(action);
     const allInfo = SortStore.getAll();
     const keys = Object.keys(allInfo);
@@ -58,4 +58,5 @@ describe('change listener functions', () => {
   expect(SortStore.on).toExist;
   expect(SortStore.removeListener).toExist;
   expect(SortStore.emit).toExist;
+  expect(Actions.SORT_ARTICLES).toExist;
 });
