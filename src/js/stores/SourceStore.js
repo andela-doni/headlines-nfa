@@ -32,7 +32,7 @@ class NewsStore extends EventEmitter {
   }
   /**
    * change listener
-   * @params {callback} function implemented
+   * @param {callback} callback implemented
    * @returns {callback } returns all the sources
    * @memberOf SourceStore
    */
@@ -41,7 +41,7 @@ class NewsStore extends EventEmitter {
   }
   /**
    * remove change listener
-   * @params {callback} function implemented
+   * @param {callback} callback implemented
    * @returns {callback } returns all the sources
    * @memberOf SourceStore
    */

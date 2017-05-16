@@ -1,32 +1,25 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from "react-router";
-import Cookies from 'js-cookie';
-import Footer from "../layout/Footer.jsx";
-import Nav from "../layout/Nav.jsx";
-import createHistory from 'history/createBrowserHistory';
+import Footer from '../layout/Footer.jsx';
+import Nav from '../layout/Nav.jsx';
 import AuthenticationStore from '../../stores/AuthenticationStore';
-import { isLoggin } from '../../actions/AuthenticationAction';
-import Login from './Login.jsx';
-const isLoggedIn = Cookies.get('debprojdb');
-const history = createHistory({
-  forceRefresh: true
-})
+
+
 export default class Layout extends React.Component {
   /**
    * constructor for Layout class
+   * @param {props} props as params
    * @constructor
    */
   constructor(props) {
     super(props);
     this.login = this.login.bind(this);
     this.state = this.userState();
-    
   }
-//Mounts the api after the articles have been mounted
 /**
    * Adds event listener
    * Layout mounting
+   * @returns {null} nothing is returned
    * @method componentDidMount
    */
   componentDidMount() {
@@ -35,46 +28,50 @@ export default class Layout extends React.Component {
   /**
    * unmounts the layout Component
    * Removes event listener
+   * @returns {null} nothing is returned
    * @method componentWillUnMount
    */
   componentWillUnmount() {
-    AuthenticationStore.removeChangeListener(this.login)
+    AuthenticationStore.removeChangeListener(this.login);
   }
    /**
    * login function
+   * @returns {null} nothing was returned
    * @method login
    */
   login() {
-    this.setState(this.userState())
+    this.setState(this.userState());
   }
 /**
    * fetches user info
+   * @returns {null} nothing was returned
    * @method userState
    */
   userState() {
+    this.logs = '';
     return {
       user: AuthenticationStore.getUser()
-    }
+    };
   }
   /**
-   * @method
+  * @returns {null} nothing was returned
    * renders the layout Component
    */
-render() {
-  const { location } = this.props;
-  const containerStyle = {
-    marginTop: "60px"
-  }; 
+  render() {
+    const { location } = this.props;
+    const containerStyle = {
+      marginTop: '60px'
+    };
 
-      return (
+    return (
 
       <div>
-        <Nav location={location} 
+        <Nav location={location}
           isLoggedIn={this.state.user.isAuthenticated}
              />
-            <div class="container" style={containerStyle}>
-              <div class="row">
-                <div class="col-lg-12">
+            <div className="container" style={containerStyle}>
+              <div className="row">
+                <div className="col-lg-12">
                   {this.props.children}
                 </div>
               </div>
@@ -82,7 +79,11 @@ render() {
             </div>
           </div>
 
-          );
+    );
   }
 }
 
+Layout.propTypes = {
+  location: PropTypes.element.isRequired,
+  children: PropTypes.element.isRequired
+};

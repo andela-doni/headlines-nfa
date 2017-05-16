@@ -34,7 +34,7 @@ class SortsStore extends EventEmitter {
   }
   /**
    * change listener
-   * @params {callback} function implemented
+   * @param {callback} callback implemented
    * @returns {callback } returns all the articles
    * @memberOf articles
    */
@@ -43,7 +43,7 @@ class SortsStore extends EventEmitter {
   }
   /**
    * remove change listener
-   * @params {callback} function implemented
+   * @param {callback} callback implemented
    * @returns {callback } returns all the articles
    * @memberOf SortsStore
    */
@@ -58,7 +58,8 @@ AppDispatcher.register((payload) => {
   switch (payload.type) {
     case Actions.SORT_ARTICLES:
       if (SortStore.articles.length > 0) SortStore.articles.list = [];
-      SortStore.articles = [...payload.response.articles, ...SortStore.articles];
+      SortStore.articles = [...payload.response.articles,
+        ...SortStore.articles];
       SortStore.source = payload.response.source;
       SortStore.sortBy = payload.response.sortBy;
       SortStore.emitChange();

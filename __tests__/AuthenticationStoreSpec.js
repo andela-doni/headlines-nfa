@@ -7,10 +7,7 @@ jest.dontMock('../src/js/stores/AuthenticationStore');
 jest.dontMock('object-assign');
 
 describe('AuthenticationStore', () => {
-  let call;
-
   beforeEach(() => {
-    call = AppDispatcher.register.mock.calls[0][0];
   });
 
   test('registers callback with dispatcher', () => {
