@@ -1,79 +1,77 @@
-import React from "react";
- 
-import { IndexLink, Link, browserHistory } from "react-router";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { IndexLink, Link, browserHistory } from 'react-router';
 import Cookies from 'js-cookie';
-import createHistory from 'history/createBrowserHistory';
-import {logout} from '../../actions/AuthenticationAction';
-
-const history = createHistory({
-  forceRefresh: true
-})
+import { logout } from '../../actions/AuthenticationAction';
 
 export default class Nav extends React.Component {
-  /**
- * @constructor for Nav class
+/**
+ * @param {null} null parameter
  */
   constructor() {
-    super()
-  
+    super();
+
     this.state = {
       collapsed: true,
-      user:Cookies.get('debprojdb')
+      user: Cookies.get('debprojdb')
     };
     this.logout = this.logout.bind(this);
+    this.toggleCollapse = this.toggleCollapse.bind(this);
+    this.log = '';
   }
 /**
- * @method toggleCollapse
+ * @returns {null} null return
  */
   toggleCollapse() {
     const collapsed = !this.state.collapsed;
-    this.setState({collapsed});
+    this.setState({ collapsed });
   }
-  /**
- * @method logout 
+/**
+ * @param {null} null parameter
+ * @returns {null} null retuen
  */
-  logout(){
+  logout() {
     logout();
+    this.setLog = '';
     browserHistory.push('/login');
   }
 /**
- * @method render method for Nav Component
+ * @param {null} render method for Nav Component
+ * @returns {null} returns jsx Components
  */
   render() {
     const { location } = this.props;
-    const { collapsed, user } = this.state;
-    const newsClass = location 
-    && location.pathname === "/" ? "active" : "";
-    const loginClass = location && location.pathname 
-    && location.pathname.match(/^\/login/) ? "active" : "";
-    const articlesClass = location && location.pathname 
-    && location.pathname.match(/^\/articles/) ? "active" : "";
+    const { collapsed } = this.state;
+    const newsClass = location
+    && location.pathname === '/' ? 'active' : '';
+    const loginClass = location && location.pathname
+    && location.pathname.match(/^\/login/) ? 'active' : '';
 
-    const navClass = collapsed ? "collapse" : "";
-    
+    const navClass = collapsed ? 'collapse' : '';
+
     return (
-      <nav className="navbar navbar-inverse navbar-fixed-top" 
+      <nav className="navbar navbar-inverse navbar-fixed-top"
         role="navigation">
         <div className="container">
           <div className="navbar-header">
-            <h4 className="navPadding main-header">  
-              <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>
+            <h4 className="navPadding main-header">
+              <IndexLink to="/" onClick="this.toggleCollapse">
                 Headlines
               </IndexLink></h4>
-            <button type="button" className="navbar-toggle" 
-            onClick={this.toggleCollapse.bind(this)} >
+            <button type="button" className="navbar-toggle"
+            onClick="this.toggleCollapse" >
               <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
-              <span className="icon-bar"></span>
+              <span className="icon-bar" />
+              <span className="icon-bar" />
+              <span className="icon-bar" />
             </button>
           </div>
-          <div className={"navbar-collapse " + navClass} 
+          <div className={`navbar-collapse ${navClass}`}
           id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav  pull-right navPad">
               <li className={newsClass}>
-                <IndexLink to="/" 
-                onClick={this.toggleCollapse.bind(this)}>Sources</IndexLink>
+                <IndexLink to="/"
+                onClick="toggleCollapse">Sources</IndexLink>
               </li>
               <li className={loginClass}>
                 <Link to="/login" onClick={this.logout}>Logout</Link>
@@ -81,9 +79,13 @@ export default class Nav extends React.Component {
             </ul>
           </div>
         </div>
-        <h1></h1>
+        <h1 />
       </nav>
     );
   }
 }
 
+Nav.propTypes = {
+  params: PropTypes.element.isRequired,
+  location: PropTypes.element.isRequired
+};

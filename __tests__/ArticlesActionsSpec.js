@@ -1,7 +1,8 @@
 import request from 'superagent';
 import expect from 'expect';
 import sinon from 'sinon';
-import { getArticles, articlesCallback } from '../src/js/actions/ArticlesActions';
+import { getArticles, articlesCallback }
+from '../src/js/actions/ArticlesActions';
 import stubRequest from '../helperFiles/helperArticles';
 import { Actions } from '../src/js/utils/AppConstants';
 import AppDispatcher from '../src/js/utils/AppDispatcher';

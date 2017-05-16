@@ -7,6 +7,8 @@ const API = '213327409d384371851777e7c7f78dfe';
 /**
  * Api call for sorts.
  * Dispatches SORT_ARTICLES actions
+ * @param {err}  err message
+ * @param {response}  response payload
  * @returns {console.error} if the api call is not available.
  */
 export const sortsCallback = (err, response) => {
@@ -20,6 +22,7 @@ export const sortsCallback = (err, response) => {
 /**
  * Api call for sorts.
  * Dispatches SORT_ARTICLES actions
+ * @param {sortsBy} sortBy payload response
  * @returns {console.error} if the api call is not available.
  */
 export function getSorts(sortBy) {

@@ -10,7 +10,6 @@ describe('getSources()', () => {
 
   beforeEach(() => {
     sources = sinon.spy();
-    
     sinon.stub(request, 'get').returns(stubRequest);
     sources = sinon.stub(stubRequest, 'end');
   });

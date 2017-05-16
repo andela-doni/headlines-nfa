@@ -59,5 +59,4 @@ describe('change listener functions', () => {
   expect(SourceStore.on).toExist;
   expect(SourceStore.removeListener).toExist;
   expect(SourceStore.emit).toExist;
-  
 });

@@ -34,8 +34,8 @@ class ArticleStore extends EventEmitter {
   }
   /**
    * change listener
-   * @params callback function implemented
-   * @returns {function} returns all the sources
+   * @param {callback} callback function
+   * @returns {null} returns all the sources
    * @memberOf SourceStore
    */
   addChangeListener(callback) {
@@ -43,7 +43,7 @@ class ArticleStore extends EventEmitter {
   }
   /**
    * remove change listener
-   * @params {callback} function implemented
+   * @param {callback} callback implemented
    * @returns {callback } returns all the sources
    * @memberOf ArticlesStore
    */
@@ -56,7 +56,8 @@ AppDispatcher.register((payload) => {
   switch (payload.type) {
     case Actions.GET_ARTICLES:
       if (ArticlesStore.articles.length > 0) ArticlesStore.articles.list = [];
-      ArticlesStore.articles = [...payload.response.articles, ...ArticlesStore.articles];
+      ArticlesStore.articles =
+      [...payload.response.articles, ...ArticlesStore.articles];
       ArticlesStore.source = payload.response.source;
       ArticlesStore.sortBy = payload.response.sortBy;
       ArticlesStore.emitChange();

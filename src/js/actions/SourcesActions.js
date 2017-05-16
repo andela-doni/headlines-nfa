@@ -2,12 +2,9 @@ import request from 'superagent';
 import { Actions } from '../utils/AppConstants';
 import AppDispatcher from '../utils/AppDispatcher';
 /**
- * Api call for sources.
- * requests for news sources from api
- * lists sources according to alphabetical order by default
- * Dispatches GET_SOURCES actions
- * @returns {console.error} if the api call is not available.
- * @argument {err, response}
+ * @param {err} err payload
+ * @param {response} response payload
+ * @returns {error}  err if the api call is not available.
  */
 export const sourcesCallback = (err, response) => {
   if (err) return;
@@ -19,7 +16,7 @@ export const sourcesCallback = (err, response) => {
 };
 /**
  * Gets the cookie info and dispatches the LOGIN action
- * Stores user information, stringUser and converts into an object.
+ * Stores user information, User and converts into an object.
  * @returns {sourcesCallback}.
  */
 export function getSources() {

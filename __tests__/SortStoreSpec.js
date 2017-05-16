@@ -49,7 +49,6 @@ describe('SortStore', () => {
 });
 
 describe('change listener functions', () => {
-
   const callback = (() => 'news');
 
   SortStore.addChangeListener(callback);
