@@ -47,7 +47,8 @@ const Login = () => (
               <GoogleLogin
                 className="classLogin"
                 clientId=
-               "428253049382-tec2fhihi9gj19m8ugqdfp24uj105mum.apps.googleusercontent.com"
+                "428253049382-tec2fhihi9gj19m8ugqdfp24uj105mum.apps.googleusercontent.com"
+
                 buttonText="Login"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
