@@ -11,10 +11,38 @@ describe('Navigation component with the elements available',() => {
       expect(wrapper.find('navbar')).toExist
     })
 
-		it('it should contain a link to the loginClass', () => {
+		it('it should contain a link to the navClass', () => {
       expect(wrapper.find('button')).toExist
     })
-		it('it should contain a link to the ', () => {
+		it('it should contain a link to the navClass', () => {
       expect(wrapper.find('a')).toExist
     })
+    	it('it should contain a link to the navClass', () => {
+      expect(wrapper.find('span')).toExist
+    })
+    it('it should contain a link to the navClass', () => {
+      expect(wrapper.find('icon-bar')).toExist
+    })
 })
+
+const wrapper = mount(<Nav />);
+sinon.spy(Nav.prototype, 'toggleCollapse');
+sinon.spy(Nav.prototype, 'logout');
+sinon.spy(Nav.prototype, 'render');
+sinon.spy(Nav.prototype, 'setState');
+
+describe('if component mounted function exists',() => {
+  it(' toggleCollapse exists', () => {
+    expect(Nav.prototype.toggleCollapse.calledOnce).toExist;  
+  });
+   it(' Logout exists', () => {
+    expect(Nav.prototype.logout.calledOnce).toExist;  
+  });
+  it(' render exists', () => {
+    expect(Nav.prototype.render.calledOnce).toExist;  
+  });
+  it(' render exists', () => {
+    expect(Nav.prototype.setState.calledOnce).toExist;  
+  });
+})
+
