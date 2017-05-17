@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/andela-doni/headlines-nfa.svg?branch=dev)](https://travis-ci.org/andela-doni/headlines-nfa)
-[![Coverage Status](https://coveralls.io/repos/github/andela-doni/headlines-nfa/badge.png?branch=dep)](https://coveralls.io/github/andela-doni/headlines-nfa?branch=dep)
+[![Coverage Status](https://coveralls.io/repos/github/andela-doni/headlines-nfa/badge.svg?branch=testing)](https://coveralls.io/github/andela-doni/headlines-nfa?branch=testing)
 [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
 
 # HEADLINES
