@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1494781771361" clover="3.2.0">
-  <project timestamp="1494781771361" name="All files">
-    <metrics statements="172" coveredstatements="127" conditionals="53" coveredconditionals="24" methods="61" coveredmethods="45" elements="286" coveredelements="196" complexity="0" loc="172" ncloc="172" packages="6" files="19" classes="19">
+<coverage generated="1495032409343" clover="3.2.0">
+  <project timestamp="1495032409343" name="All files">
+    <metrics statements="130" coveredstatements="100" conditionals="41" coveredconditionals="20" methods="43" coveredmethods="31" elements="214" coveredelements="151" complexity="0" loc="130" ncloc="130" packages="6" files="16" classes="16">
       <package name="helperFiles">
         <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="helperArticles.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/helperFiles/helperArticles.js">
@@ -27,209 +27,158 @@
         </file>
       </package>
       <package name="src.js.actions">
-        <metrics statements="24" coveredstatements="22" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="7"/>
+        <metrics statements="24" coveredstatements="24" conditionals="8" coveredconditionals="4" methods="8" coveredmethods="8"/>
         <file name="ArticlesActions.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/actions/ArticlesActions.js">
           <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-          <line num="13" count="3" type="stmt"/>
-          <line num="14" count="3" type="stmt"/>
-          <line num="16" count="3" type="stmt"/>
-          <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="18" count="1" type="stmt"/>
-          <line num="19" count="1" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="15" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
         </file>
         <file name="AuthenticationAction.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/actions/AuthenticationAction.js">
-          <metrics statements="5" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
+          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
           <line num="10" count="2" type="cond" truecount="1" falsecount="1"/>
           <line num="11" count="2" type="stmt"/>
           <line num="12" count="2" type="stmt"/>
-          <line num="23" count="0" type="stmt"/>
-          <line num="24" count="0" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
         </file>
         <file name="SortActions.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/actions/SortActions.js">
           <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-          <line num="5" count="3" type="stmt"/>
-          <line num="6" count="3" type="stmt"/>
-          <line num="12" count="3" type="stmt"/>
-          <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
           <line num="14" count="1" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="26" count="1" type="stmt"/>
+          <line num="15" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="29" count="1" type="stmt"/>
         </file>
         <file name="SourcesActions.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/actions/SourcesActions.js">
           <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
-          <line num="12" count="3" type="stmt"/>
-          <line num="13" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="14" count="1" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="26" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="10" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.js.components.layout">
-        <metrics statements="16" coveredstatements="12" conditionals="16" coveredconditionals="7" methods="5" coveredmethods="3"/>
+        <metrics statements="19" coveredstatements="17" conditionals="11" coveredconditionals="5" methods="5" coveredmethods="4"/>
         <file name="Footer.jsx" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/components/layout/Footer.jsx">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="7" count="1" type="stmt"/>
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
         </file>
         <file name="Nav.jsx" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/components/layout/Nav.jsx">
-          <metrics statements="15" coveredstatements="11" conditionals="16" coveredconditionals="7" methods="4" coveredmethods="2"/>
-          <line num="8" count="2" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
+          <metrics statements="17" coveredstatements="15" conditionals="11" coveredconditionals="5" methods="4" coveredmethods="3"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
           <line num="19" count="1" type="stmt"/>
-          <line num="23" count="1" type="stmt"/>
-          <line num="29" count="0" type="stmt"/>
-          <line num="30" count="0" type="stmt"/>
-          <line num="36" count="0" type="stmt"/>
-          <line num="37" count="0" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
           <line num="43" count="1" type="stmt"/>
           <line num="44" count="1" type="stmt"/>
           <line num="45" count="1" type="cond" truecount="2" falsecount="2"/>
           <line num="47" count="1" type="cond" truecount="2" falsecount="3"/>
-          <line num="49" count="1" type="cond" truecount="2" falsecount="3"/>
-          <line num="52" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="54" count="1" type="stmt"/>
+          <line num="50" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="88" count="1" type="stmt"/>
         </file>
       </package>
       <package name="src.js.components.pages">
-        <metrics statements="51" coveredstatements="35" conditionals="16" coveredconditionals="9" methods="24" coveredmethods="11"/>
+        <metrics statements="41" coveredstatements="26" conditionals="16" coveredconditionals="9" methods="18" coveredmethods="7"/>
         <file name="Articles.jsx" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/components/pages/Articles.jsx">
-          <metrics statements="18" coveredstatements="10" conditionals="16" coveredconditionals="9" methods="8" coveredmethods="3"/>
-          <line num="16" count="2" type="stmt"/>
-          <line num="17" count="2" type="stmt"/>
-          <line num="21" count="2" type="stmt"/>
-          <line num="30" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+          <metrics statements="20" coveredstatements="12" conditionals="16" coveredconditionals="9" methods="8" coveredmethods="3"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="20" count="1" type="stmt"/>
+          <line num="29" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="31" count="0" type="stmt"/>
           <line num="32" count="0" type="stmt"/>
-          <line num="33" count="0" type="stmt"/>
-          <line num="42" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
           <line num="49" count="0" type="stmt"/>
           <line num="58" count="0" type="stmt"/>
-          <line num="68" count="2" type="cond" truecount="2" falsecount="1"/>
-          <line num="71" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="72" count="2" type="stmt"/>
-          <line num="73" count="2" type="cond" truecount="2" falsecount="1"/>
-          <line num="76" count="2" type="stmt"/>
-          <line num="77" count="2" type="stmt"/>
+          <line num="70" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="73" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="74" count="1" type="stmt"/>
+          <line num="75" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="76" count="1" type="stmt"/>
+          <line num="77" count="1" type="stmt"/>
           <line num="86" count="0" type="stmt"/>
-          <line num="95" count="0" type="stmt"/>
-        </file>
-        <file name="Layout.jsx" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/components/pages/Layout.jsx">
-          <metrics statements="12" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="12" count="1" type="stmt"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="22" count="1" type="stmt"/>
-          <line num="23" count="1" type="stmt"/>
-          <line num="33" count="0" type="stmt"/>
-          <line num="41" count="0" type="stmt"/>
-          <line num="48" count="0" type="stmt"/>
-          <line num="55" count="1" type="stmt"/>
-          <line num="64" count="1" type="stmt"/>
-          <line num="65" count="1" type="stmt"/>
-          <line num="69" count="1" type="stmt"/>
+          <line num="94" count="0" type="stmt"/>
+          <line num="114" count="1" type="stmt"/>
         </file>
         <file name="Login.jsx" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/components/pages/Login.jsx">
           <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-          <line num="13" count="2" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
           <line num="14" count="2" type="stmt"/>
           <line num="15" count="2" type="stmt"/>
           <line num="20" count="2" type="stmt"/>
           <line num="21" count="2" type="stmt"/>
           <line num="22" count="2" type="stmt"/>
-          <line num="25" count="2" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
           <line num="26" count="3" type="stmt"/>
         </file>
         <file name="NewsSources.jsx" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/components/pages/NewsSources.jsx">
-          <metrics statements="13" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
-          <line num="16" count="2" type="stmt"/>
-          <line num="17" count="2" type="stmt"/>
-          <line num="21" count="2" type="stmt"/>
-          <line num="29" count="1" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
-          <line num="39" count="0" type="stmt"/>
-          <line num="47" count="0" type="stmt"/>
+          <metrics statements="13" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="2"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="18" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
           <line num="56" count="0" type="stmt"/>
-          <line num="63" count="2" type="stmt"/>
-          <line num="64" count="2" type="stmt"/>
-          <line num="65" count="0" type="stmt"/>
-          <line num="69" count="2" type="stmt"/>
-          <line num="84" count="0" type="stmt"/>
+          <line num="63" count="1" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="68" count="1" type="stmt"/>
+          <line num="82" count="0" type="stmt"/>
         </file>
       </package>
       <package name="src.js.stores">
-        <metrics statements="67" coveredstatements="48" conditionals="13" coveredconditionals="4" methods="24" coveredmethods="24"/>
+        <metrics statements="32" coveredstatements="23" conditionals="6" coveredconditionals="2" methods="12" coveredmethods="12"/>
         <file name="ArticlesStore.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/stores/ArticlesStore.js">
           <metrics statements="18" coveredstatements="12" conditionals="4" coveredconditionals="1" methods="6" coveredmethods="6"/>
-          <line num="16" count="3" type="stmt"/>
-          <line num="17" count="3" type="stmt"/>
-          <line num="18" count="3" type="stmt"/>
-          <line num="19" count="3" type="stmt"/>
-          <line num="26" count="4" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="26" count="3" type="stmt"/>
           <line num="33" count="1" type="stmt"/>
           <line num="42" count="1" type="stmt"/>
           <line num="51" count="1" type="stmt"/>
-          <line num="54" count="3" type="stmt"/>
-          <line num="55" count="3" type="stmt"/>
+          <line num="54" count="2" type="stmt"/>
+          <line num="55" count="2" type="stmt"/>
           <line num="56" count="1" type="cond" truecount="1" falsecount="1"/>
           <line num="58" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="59" count="0" type="stmt"/>
-          <line num="60" count="0" type="stmt"/>
-          <line num="61" count="0" type="stmt"/>
-          <line num="62" count="0" type="stmt"/>
-          <line num="63" count="0" type="stmt"/>
-          <line num="65" count="1" type="stmt"/>
-        </file>
-        <file name="AuthenticationStore.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/stores/AuthenticationStore.js">
-          <metrics statements="17" coveredstatements="13" conditionals="3" coveredconditionals="1" methods="6" coveredmethods="6"/>
-          <line num="30" count="3" type="stmt"/>
-          <line num="31" count="3" type="stmt"/>
-          <line num="40" count="1" type="stmt"/>
-          <line num="47" count="3" type="stmt"/>
-          <line num="56" count="1" type="stmt"/>
-          <line num="65" count="1" type="stmt"/>
-          <line num="75" count="3" type="stmt"/>
-          <line num="76" count="3" type="stmt"/>
-          <line num="77" count="2" type="cond" truecount="1" falsecount="2"/>
-          <line num="79" count="2" type="stmt"/>
-          <line num="83" count="2" type="stmt"/>
-          <line num="84" count="2" type="stmt"/>
-          <line num="88" count="0" type="stmt"/>
-          <line num="91" count="0" type="stmt"/>
-          <line num="92" count="0" type="stmt"/>
-          <line num="94" count="0" type="stmt"/>
-          <line num="96" count="2" type="stmt"/>
-        </file>
-        <file name="SortStore.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/stores/SortStore.js">
-          <metrics statements="18" coveredstatements="12" conditionals="4" coveredconditionals="1" methods="6" coveredmethods="6"/>
-          <line num="16" count="3" type="stmt"/>
-          <line num="17" count="3" type="stmt"/>
-          <line num="18" count="3" type="stmt"/>
-          <line num="19" count="3" type="stmt"/>
-          <line num="26" count="2" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="42" count="1" type="stmt"/>
-          <line num="51" count="1" type="stmt"/>
-          <line num="55" count="3" type="stmt"/>
-          <line num="57" count="3" type="stmt"/>
-          <line num="58" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="61" count="0" type="stmt"/>
           <line num="62" count="0" type="stmt"/>
           <line num="63" count="0" type="stmt"/>
           <line num="64" count="0" type="stmt"/>
-          <line num="65" count="0" type="stmt"/>
-          <line num="67" count="1" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
         </file>
         <file name="SourceStore.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/stores/SourceStore.js">
           <metrics statements="14" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="6"/>
-          <line num="16" count="2" type="stmt"/>
-          <line num="17" count="2" type="stmt"/>
-          <line num="24" count="4" type="stmt"/>
+          <line num="16" count="3" type="stmt"/>
+          <line num="17" count="3" type="stmt"/>
+          <line num="24" count="3" type="stmt"/>
           <line num="31" count="1" type="stmt"/>
-          <line num="40" count="2" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
           <line num="49" count="1" type="stmt"/>
-          <line num="52" count="2" type="stmt"/>
-          <line num="54" count="2" type="stmt"/>
+          <line num="52" count="3" type="stmt"/>
+          <line num="54" count="3" type="stmt"/>
           <line num="55" count="1" type="cond" truecount="1" falsecount="1"/>
           <line num="57" count="0" type="stmt"/>
           <line num="58" count="0" type="stmt"/>
@@ -242,8 +191,8 @@
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="AppConstants.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/utils/AppConstants.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="2" count="12" type="stmt"/>
-          <line num="10" count="12" type="stmt"/>
+          <line num="1" count="9" type="stmt"/>
+          <line num="9" count="9" type="stmt"/>
         </file>
         <file name="AppDispatcher.js" path="/Users/andeladeveloper/Documents/Andela/headlines-nfa/src/js/utils/AppDispatcher.js">
           <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

@@ -61,3 +61,4 @@ describe('change listener functions', () => {
   expect(ArticlesStore.removeListener).toExist;
   expect(ArticlesStore.emit).toExist;
 });
+

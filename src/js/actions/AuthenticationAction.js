@@ -3,12 +3,12 @@ import { Actions } from '../utils/AppConstants';
 import AppDispatcher from '../utils/AppDispatcher';
 /**
  * Gets the cookie info and dispatches the LOGIN action
- * Stores user information, stringUser and converts into an object.
+ * Stores user information, userInfo and converts into an object.
  * @returns {nothing}.
  */
 export function isLoggin() {
-  const stringUser = Cookies.get('debprojdb') || false; // false so that undefined is not passed to JSON.parse
-  const user = JSON.parse(stringUser);
+  const userInfo = Cookies.get('debprojdb') || false;
+  const user = JSON.parse(userInfo);
   AppDispatcher.dispatch({
     type: Actions.LOGIN,
     user

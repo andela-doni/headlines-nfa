@@ -20,7 +20,6 @@ import { Actions } from '../utils/AppConstants';
    * @extends EventEmitter
    */
 class Authentication extends EventEmitter {
-// initiates the user authentication condition as false
   /**
    * Source store class
    * @class Authentication
@@ -34,7 +33,7 @@ class Authentication extends EventEmitter {
   }
   /**
    * Source store class
-   * @returns {this.user}
+   * @returns {this.user} users
    */
   getUser() {
     return this.user;
@@ -48,7 +47,7 @@ class Authentication extends EventEmitter {
   }
   /**
    * change listener
-   * @params callback function implemented
+   * @param {callback} callback implemented
    * @returns {function} returns all the sources
    * @memberOf SourceStore
    */
@@ -57,7 +56,7 @@ class Authentication extends EventEmitter {
   }
   /**
    * remove change listener
-   * @params {callback} function implemented
+   * @param {callback} callback implemented
    * @returns {callback } returns all the sources
    * @memberOf ArticlesStore
    */

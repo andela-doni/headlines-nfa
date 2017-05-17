@@ -1,8 +1,10 @@
-
+../coverage/lcov.info
+../src/client.min.js
 # Logs
 logs
 *.log
 npm-debug.log*
+
 
 
 # Runtime data

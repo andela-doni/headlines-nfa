@@ -12,7 +12,6 @@
     "mocha": true,
     "jquery": true,
     "jasmine": true,
-    "enzyme":true,
     "jest":true
   },
   "parserOptions": {

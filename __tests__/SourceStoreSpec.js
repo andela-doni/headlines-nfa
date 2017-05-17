@@ -5,7 +5,6 @@ import SourceStore from '../src/js/stores/SourceStore';
 
 jest.mock('../src/js/utils/AppDispatcher');
 jest.dontMock('../src/js/stores/SourceStore');
-jest.dontMock('object-assign');
 
 describe('SourceStore', () => {
   const action = {
@@ -33,7 +32,7 @@ describe('SourceStore', () => {
     expect(allInfo).toBe(0);
   });
 
-  test('registers tthe right payload', () => {
+  test('registers the right payload', () => {
     onSuccess(action);
     const allInfo = SourceStore.getAll();
     const keys = Object.keys(allInfo);
