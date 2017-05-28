@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for components/layout/Nav.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">components/layout</a> Nav.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.33% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.75% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.33% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/15</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+ 
+import { IndexLink, Link, browserHistory } from "react-router";
+import Cookies from 'js-cookie';
+import createHistory from 'history/createBrowserHistory';
+import {logout} from '../../actions/AuthenticationAction';
+&nbsp;
+&nbsp;
+const history = createHistory({
+  forceRefresh: true
+})
+&nbsp;
+export default class Nav extends React.Component {
+  constructor() {
+    super()
+  
+    this.state = {
+      collapsed: true,
+      user:Cookies.get('debprojdb')
+    };
+    this.logout = this.logout.bind(this);
+  }
+<span class="fstat-no" title="function not covered" >  to</span>ggleCollapse() {
+    const collapsed = <span class="cstat-no" title="statement not covered" >!this.state.collapsed;</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({collapsed});</span>
+  }
+<span class="fstat-no" title="function not covered" >  lo</span>gout(){
+<span class="cstat-no" title="statement not covered" >    logout();</span>
+<span class="cstat-no" title="statement not covered" >    browserHistory.push('/login');</span>
+  }
+&nbsp;
+  render() {
+    const { location } = this.props;
+    const { collapsed, user } = this.state;
+    const newsClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname === "/" </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
+    const loginClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/login/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
+    const articlesClass = location &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >location.pathname </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >location.pathname.match(/^\/articles/) </span>? <span class="branch-0 cbranch-no" title="branch not covered" >"active" </span>: "";
+&nbsp;
+    const navClass = collapsed ? "collapse" : <span class="branch-1 cbranch-no" title="branch not covered" >"";</span>
+    
+    return (
+      &lt;nav className="navbar navbar-inverse navbar-fixed-top" role="navigation"&gt;
+        &lt;div className="container"&gt;
+          &lt;div className="navbar-header"&gt;
+             &lt;a class="navbar-brand"&gt;Headlines&lt;/a&gt;
+            &lt;button type="button" className="navbar-toggle" onClick={this.toggleCollapse.bind(this)} &gt;
+              &lt;span className="sr-only"&gt;Toggle navigation&lt;/span&gt;
+              &lt;span className="icon-bar"&gt;&lt;/span&gt;
+              &lt;span className="icon-bar"&gt;&lt;/span&gt;
+              &lt;span className="icon-bar"&gt;&lt;/span&gt;
+            &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div className={"navbar-collapse " + navClass} id="bs-example-navbar-collapse-1"&gt;
+            &lt;ul className="nav navbar-nav  pull-right"&gt;
+              &lt;li className={newsClass}&gt;
+                &lt;IndexLink to="/" onClick={this.toggleCollapse.bind(this)}&gt;Sources&lt;/IndexLink&gt;
+              &lt;/li&gt;
+              &lt;li className={loginClass}&gt;
+                &lt;Link to="/login" onClick={this.logout}&gt;Logout&lt;/Link&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;h1&gt;&lt;/h1&gt;
+      &lt;/nav&gt;
+    );
+  }
+}
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue May 09 2017 02:07:18 GMT+0100 (WAT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
