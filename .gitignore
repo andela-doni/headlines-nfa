@@ -33,3 +33,4 @@ jspm_packages
 coverage
 
 .DS_Store
+src/client.min.js
